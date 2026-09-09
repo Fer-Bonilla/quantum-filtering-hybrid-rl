@@ -1,0 +1,40 @@
+artifact,path,available,period,frequency,rows,notes
+campaign_1_v3.csv,outputs/tables/campaign_1_v3.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),40,Sharpe/metricas agregadas por corrida A/B/C/D
+variant_R_v6.csv,outputs/tables/variant_R_v6.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),10,corridas selector R
+variant_Q_v6.csv,outputs/tables/variant_Q_v6.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),10,corridas selector Q
+rotation_sweep_v7.csv,outputs/tables/rotation_sweep_v7.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),60,corridas S(p) x6
+oracle_v7.csv,outputs/tables/oracle_v7.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),10,corridas mascara-oraculo (diagnostico)
+abl_nisq_v3.csv,outputs/tables/abl_nisq_v3.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),12,corridas D bajo ruido NISQ x4
+abl_coin_v3.csv,outputs/tables/abl_coin_v3.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),9,corridas D con monedas x3
+sticky_calibrated_v8.csv,outputs/tables/sticky_calibrated_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),40,corridas S(p*) (control posterior)
+crel_variant_v8.csv,outputs/tables/crel_variant_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),10,corridas Crel (control posterior)
+regular_topologies_v8.csv,outputs/tables/regular_topologies_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),120,corridas topologia x selector x12
+soft_integration_v8.csv,outputs/tables/soft_integration_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),30,corridas soft x3
+informed_walkers_v8.csv,outputs/tables/informed_walkers_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),30,corridas informados x3
+tost_extension_v8.csv,outputs/tables/tost_extension_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),60,"brazos R y D, 30 semillas nuevas"
+review3_checks_v8.csv,outputs/tables/review3_checks_v8.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),70,D centrada + sensibilidad costes (70 corridas)
+benchmarks_v6.csv,outputs/tables/benchmarks_v6.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),22,benchmarks clasicos agregados
+walk_forward_v4.csv,outputs/tables/walk_forward_v4.csv,si,2021-01-01..2024-12-31 (por pliegue anual),diaria (agregada),48,walk-forward C/D agregado por pliegue
+regime_validation_v7.csv,outputs/tables/regime_validation_v7.csv,si,2021-01-01..2024-12-31 (por pliegue anual),diaria (agregada),124,validacion por regimen (agregados)
+financial_stats_v8.csv,outputs/tables/financial_stats_v8.csv,si,2021-01-01..2024-12-31 (por pliegue anual),diaria (agregada),5,EXP-11 original (procedimiento anterior)
+dsr_trial_sharpes.csv,outputs/tables/dsr_trial_sharpes.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),40,familia de ensayos DSR (nuevo)
+dsr_recalculated.csv,outputs/tables/dsr_recalculated.csv,si,2021-01-01..2024-12-31 (por pliegue anual),diaria (agregada),13,DSR recalculado (nuevo)
+fallback_events.csv,outputs/tables/fallback_events.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),37800,eventos por paso del replay instrumentado (nuevo)
+fallback_summary.csv,outputs/tables/fallback_summary.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),30,resumen de respaldo por brazo/semilla (nuevo)
+fallback_paired_effects.csv,outputs/tables/fallback_paired_effects.csv,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),2,D-C con y sin respaldos (nuevo)
+mask_steps_v8.npz,outputs/tables/mask_steps_v8.npz,si,2023-08-11..2024-12-30 (349 fechas),diaria (agregada),,mascaras por paso del replay v8 (uint8)
+evaluate.py,src/training/evaluate.py,si,,,,"evaluacion: Sharpe por paso, cand/topm; NO persiste series por paso"
+reward.py,src/env/reward.py,si,,,,"recompensa: retorno log, penalizaciones"
+market_env.py,src/env/market_env.py,si,,,,entorno; coste de transaccion en el paso
+hybrid_agent.py,src/agents/hybrid_agent.py,si,,,,make_mask; respaldo q_t=U lineas 123-152
+subgraph_selector.py,src/graph/subgraph_selector.py,si,,,,select_subgraph; ValueError en aislado/no elegible
+run_campaign.py,scripts/run_campaign.py,si,,,,pipeline entrenar+evaluar (5 episodios)
+model_d_v2.yaml,configs/experiment/model_d_v2.yaml,si,,,,configuracion exacta de D (A/C/R variantes del mismo pipeline)
+fallback_instrumentation_v8.py,scripts/fallback_instrumentation_v8.py,si,,,,replay instrumentado (nuevo)
+build_dsr_trial_family.py,scripts/build_dsr_trial_family.py,si,,,,familia de ensayos (nuevo)
+recalculate_dsr_review.py,scripts/recalculate_dsr_review.py,si,,,,recalculo DSR (nuevo)
+registros_por_paso_evaluacion,,NO,,,,fecha/accion/retorno por paso de las campanias: evaluate_agent solo devuelve agregados; nunca se escribieron
+checkpoints_politicas,,NO,,,,outputs/checkpoints esta vacio (.gitkeep): las politicas PPO entrenadas no se conservaron
+adr_daily_returns.csv,,NO,,,,"NO PRODUCIBLE: requiere acciones ejecutadas por fecha, que exigirian reentrenar (fuera del alcance del encargo)"
+adr_series_stats.csv,,NO,,,,NO PRODUCIBLE: depende del anterior
+series_diarias_alineadas_40_configs,,NO,,,,no existen series por fecha por configuracion => matriz de correlacion y K_eff no estimables

@@ -1,0 +1,14 @@
+estrategia,escenario,K,sd_transversal,sharpe,T,skew,kurt_pearson,sr_star,dsr,veredicto_095,estado,nota
+equal_weight,K=39_sd_candidatas,39,0.019447,0.052493,1004,-0.2896,5.2538,0.042383,0.624495,"no supera 0,95",recalculo_valido,familia candidata completa (sin oraculo); recomendado
+equal_weight,K=19_sd_seleccion,19,0.024123,0.052493,1004,-0.2896,5.2538,0.045303,0.589268,"no supera 0,95",recalculo_valido,solo seleccion original sin oraculo (controles v8 separados)
+equal_weight,K=20_asumido,20,0.019447,0.052493,1004,-0.2896,5.2538,0.036962,0.687029,"no supera 0,95",recalculo_valido,sensibilidad por valor asumido
+equal_weight,K=10_asumido,10,0.019447,0.052493,1004,-0.2896,5.2538,0.030621,0.7538,"no supera 0,95",recalculo_valido,sensibilidad por valor asumido
+momentum_20d,K=39_sd_candidatas,39,0.019447,0.077058,1003,-0.0243,5.2285,0.042383,0.86284,"no supera 0,95",recalculo_valido,familia candidata completa (sin oraculo); recomendado
+momentum_20d,K=19_sd_seleccion,19,0.024123,0.077058,1003,-0.0243,5.2285,0.045303,0.841615,"no supera 0,95",recalculo_valido,solo seleccion original sin oraculo (controles v8 separados)
+momentum_20d,K=20_asumido,20,0.019447,0.077058,1003,-0.0243,5.2285,0.036962,0.896896,"no supera 0,95",recalculo_valido,sensibilidad por valor asumido
+momentum_20d,K=10_asumido,10,0.019447,0.077058,1003,-0.0243,5.2285,0.030621,0.928402,"no supera 0,95",recalculo_valido,sensibilidad por valor asumido
+momentum_20d,publicado_v8_EXP11,40,,,,,,,0.594785,"no supera 0,95",procedimiento_anterior_no_valido,"varianza de muestreo individual, no transversal"
+equal_weight,publicado_v8_EXP11,40,,,,,,,0.293946,"no supera 0,95",procedimiento_anterior_no_valido,"varianza de muestreo individual, no transversal"
+A,sin_DSR,,,,,,,,,,sin_serie_diaria_verificable,sin registros por paso ni checkpoints; no reconstruible sin reentrenar
+D,sin_DSR,,,,,,,,,,sin_serie_diaria_verificable,sin registros por paso ni checkpoints; no reconstruible sin reentrenar
+R,sin_DSR,,,,,,,,,,sin_serie_diaria_verificable,sin registros por paso ni checkpoints; no reconstruible sin reentrenar

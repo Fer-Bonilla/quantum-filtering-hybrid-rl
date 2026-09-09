@@ -1,0 +1,19 @@
+# Modelo D: PPO + subgrafo H_t + DTQW (variante híbrida cuántica).
+
+defaults:
+  - ../data/nivel1
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/default
+  - ../quantum/default
+
+agent:
+  model: D
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_d
+
+seeds: [42, 123, 456]

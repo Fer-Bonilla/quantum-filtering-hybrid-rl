@@ -1,0 +1,12 @@
+# Configuración del grafo dinámico G_t (Sec. 6.4 / 7.5-7.9).
+
+graph:
+  alpha: 1.0                    # Peso correlación móvil positiva
+  beta: 0.0                     # Peso afinidad sectorial (0 = ignorar)
+  eps: 1.0e-8
+  lookback_window: 60           # Lt
+  k_neighbors: 5
+  sym_mode: avg                 # avg | max | mutual
+  subgraph_max_size: 8          # M
+  seed_score_window: 20         # Ls
+  update_frequency: 1           # cada N steps reconstruir G_t

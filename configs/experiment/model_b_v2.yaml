@@ -1,0 +1,26 @@
+# Modelo B v2: PPO + estado clásico AUMENTADO con rasgos relacionales de G_t.
+#
+# Cambio crítico vs model_b.yaml: ``use_relational_features: true`` hace
+# que ``MarketEnv`` invoque ``RelationalStateBuilder`` en cada step y
+# concatene una matriz ``(N, d_rel)`` al estado clásico (Sec. 5.5.3).
+# Esto es lo que arregla el Problema 1.4 del revisor (B colapsaba a A).
+
+defaults:
+  - ../data/nivel1
+  - ../env/v2
+  - ../agent/ppo
+  - ../graph/default
+
+agent:
+  model: B
+
+env:
+  use_relational_features: true
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_b_v2
+
+seeds: [42, 123, 456, 789, 1024]

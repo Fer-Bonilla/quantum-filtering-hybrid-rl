@@ -1,0 +1,161 @@
+[tuning] softD beta=0.5 seed=42 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0231
+[tuning] softD beta=0.5 seed=123 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0099
+[tuning] softD beta=0.5 seed=456 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0260
+[tuning] softD beta=1.0 seed=42 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0292
+[tuning] softD beta=1.0 seed=123 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0260
+[tuning] softD beta=1.0 seed=456 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0517
+[tuning] softD beta=2.0 seed=42 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0247
+[tuning] softD beta=2.0 seed=123 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0422
+[tuning] softD beta=2.0 seed=456 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0490
+
+[beta*] 0.5 (sharpe medio -0.0196)
+
+[1/30] softD (beta*=0.5) seed=42 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0277 cand=0.7794 dur=85s
+[2/30] softC (beta*=0.5) seed=42 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0209 cand=0.7794 dur=70s
+[3/30] softR (beta*=0.5) seed=42 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0192 cand=0.7794 dur=70s
+[4/30] softD (beta*=0.5) seed=123 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0416 cand=0.7881 dur=86s
+[5/30] softC (beta*=0.5) seed=123 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0287 cand=0.7881 dur=70s
+[6/30] softR (beta*=0.5) seed=123 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0574 cand=0.7881 dur=68s
+[7/30] softD (beta*=0.5) seed=456 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0903 cand=0.7865 dur=89s
+[8/30] softC (beta*=0.5) seed=456 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0374 cand=0.7865 dur=46s
+[9/30] softR (beta*=0.5) seed=456 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0184 cand=0.7865 dur=46s
+[10/30] softD (beta*=0.5) seed=789 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0057 cand=0.7833 dur=57s
+[11/30] softC (beta*=0.5) seed=789 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0396 cand=0.7833 dur=46s
+[12/30] softR (beta*=0.5) seed=789 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0030 cand=0.7833 dur=48s
+[13/30] softD (beta*=0.5) seed=1024 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0227 cand=0.7841 dur=60s
+[14/30] softC (beta*=0.5) seed=1024 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0057 cand=0.7841 dur=50s
+[15/30] softR (beta*=0.5) seed=1024 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0012 cand=0.7841 dur=46s
+[16/30] softD (beta*=0.5) seed=7 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0211 cand=0.7794 dur=59s
+[17/30] softC (beta*=0.5) seed=7 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0224 cand=0.7794 dur=48s
+[18/30] softR (beta*=0.5) seed=7 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0133 cand=0.7794 dur=57s
+[19/30] softD (beta*=0.5) seed=99 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0521 cand=0.7833 dur=79s
+[20/30] softC (beta*=0.5) seed=99 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0330 cand=0.7833 dur=67s
+[21/30] softR (beta*=0.5) seed=99 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0479 cand=0.7833 dur=69s
+[22/30] softD (beta*=0.5) seed=314 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0568 cand=0.7825 dur=89s
+[23/30] softC (beta*=0.5) seed=314 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0511 cand=0.7825 dur=67s
+[24/30] softR (beta*=0.5) seed=314 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0428 cand=0.7825 dur=64s
+[25/30] softD (beta*=0.5) seed=1729 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0081 cand=0.7770 dur=81s
+[26/30] softC (beta*=0.5) seed=1729 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0225 cand=0.7770 dur=65s
+[27/30] softR (beta*=0.5) seed=1729 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0107 cand=0.7770 dur=64s
+[28/30] softD (beta*=0.5) seed=65535 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0261 cand=0.7833 dur=84s
+[29/30] softC (beta*=0.5) seed=65535 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0779 cand=0.7833 dur=62s
+[30/30] softR (beta*=0.5) seed=65535 ...
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0322 cand=0.7833 dur=71s
+
+[OK] tuning=9 main=30

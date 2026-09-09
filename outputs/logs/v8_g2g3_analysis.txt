@@ -1,0 +1,52 @@
+======================================================================
+COMPUERTA G2 — EXP-5 subgrafos de regularidad controlada
+======================================================================
+
+H-v8.4  D-R cand_hit AGREGADA sobre 4 topologias (unilateral D>R)
+  d=-0.0273 IC95[-0.0385,-0.0175] p=1.0000 pBonf6=1.0000 (n=10)
+  VEREDICTO: NO significativa => D~R tambien en regulares (Escenario A ampliado)
+
+Por topologia (exploratorio):
+topologia       D-R cand        p    D-C cand        p     medias D/C/R (cand)
+dreg_aff         +0.0079   0.0642     -0.0051   0.9232   0.466/0.471/0.458
+dreg_uni         +0.0048   0.2616     -0.0343   1.0000   0.463/0.497/0.458
+cycle            -0.0521   1.0000     -0.1207   1.0000   0.406/0.527/0.458
+bipartite        -0.0699   1.0000     -0.0269   1.0000   0.388/0.415/0.458
+
+Sharpe por topologia (exploratorio, D-R):
+  dreg_aff     d=-0.0137 p2=0.0520
+  dreg_uni     d=-0.0301 p2=0.0000
+  cycle        d=+0.0042 p2=0.7276
+  bipartite    d=-0.0078 p2=0.3688
+
+--- Exponente de dispersion (RMS distancia vs k; secundaria) ---
+topologia        exponente (pendiente log-log)
+bfs_irregular              0.240   (RMS medio k=1..6: 1.00, 1.19, 1.44, 1.45, 1.47, 1.52)
+dreg_aff                   0.125   (RMS medio k=1..6: 1.00, 1.16, 1.42, 1.21, 1.39, 1.17)
+dreg_uni                   0.237   (RMS medio k=1..6: 1.00, 1.60, 1.88, 1.76, 1.66, 1.51)
+cycle                      0.533   (RMS medio k=1..6: 1.00, 2.00, 3.00, 4.00, 3.00, 2.00)
+bipartite                  0.107   (RMS medio k=1..6: 1.00, 1.73, 1.00, 0.00, 1.00, 1.73)
+  referencia: ~1.0 balistico, ~0.5 difusivo (saturacion por tamano finito M=8 reduce la pendiente para k grandes)
+
+======================================================================
+COMPUERTA G3 — EXP-6 (integracion suave) y EXP-7 (informados+rotacion)
+======================================================================
+
+H-v8.5  Sharpe soft-D - soft-R (unilateral, beta*=0.5)
+  d=+0.0134 IC95[+0.0019,+0.0285] p=0.0098 pBonf6=0.0588 (n=10)
+  VEREDICTO: NO significativa
+
+  Medias (Sharpe / cand_hit / topm):
+    softD   +0.0352 / 0.7827 / 0.1794
+    softC   +0.0339 / 0.7827 / 0.1907
+    softR   +0.0219 / 0.7827 / 0.1783
+    (referencia dura D: Sharpe +0.0447)
+  [exploratorio] softD-softC Sharpe d=+0.0013 p2=0.8804
+
+EXP-7  selectores informados+rotacion vs R (exploratorio, FDR):
+  momentum_refresh   candidate_hit_rate   d=-0.0479 IC95[-0.0577,-0.0372] p=1.0000 q_FDR=1.0000
+  momentum_refresh   sharpe_ratio         d=-0.0096 IC95[-0.0240,+0.0045] p=0.9054 q_FDR=1.0000
+  softmax            candidate_hit_rate   d=+0.0021 IC95[-0.0094,+0.0136] p=0.3662 q_FDR=1.0000
+  softmax            sharpe_ratio         d=-0.0123 IC95[-0.0279,+0.0032] p=0.9406 q_FDR=1.0000
+  thompson           candidate_hit_rate   d=+0.0102 IC95[-0.0020,+0.0226] p=0.0500 q_FDR=0.3000
+  thompson           sharpe_ratio         d=-0.0323 IC95[-0.0451,-0.0210] p=1.0000 q_FDR=1.0000

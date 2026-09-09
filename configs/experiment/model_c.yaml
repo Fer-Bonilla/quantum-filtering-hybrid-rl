@@ -1,0 +1,19 @@
+# Modelo C: PPO + subgrafo H_t + caminata aleatoria clásica ponderada.
+
+defaults:
+  - ../data/nivel1
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/default
+  - ../quantum/default
+
+agent:
+  model: C
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_c
+
+seeds: [42, 123, 456]

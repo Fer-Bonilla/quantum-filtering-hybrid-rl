@@ -1,0 +1,32 @@
+[1/6] random ...
+  random           seed=42     sharpe=+0.0842 cum=+1.632 topm=0.201 cov=1.000
+  random           seed=123    sharpe=+0.0743 cum=+1.533 topm=0.202 cov=1.000
+  random           seed=456    sharpe=+0.0259 cum=+0.541 topm=0.188 cov=1.000
+  random           seed=789    sharpe=+0.0667 cum=+1.500 topm=0.208 cov=1.000
+  random           seed=1024   sharpe=+0.0572 cum=+1.314 topm=0.206 cov=1.000
+[2/6] momentum_20d ...
+  momentum_20d     seed=42     sharpe=+0.1151 cum=+3.812 topm=0.241 cov=0.700
+  momentum_20d     seed=123    sharpe=+0.1257 cum=+4.216 topm=0.244 cov=0.700
+  momentum_20d     seed=456    sharpe=+0.1227 cum=+4.308 topm=0.229 cov=0.667
+  momentum_20d     seed=789    sharpe=+0.1250 cum=+4.294 topm=0.245 cov=0.700
+  momentum_20d     seed=1024   sharpe=+0.1128 cum=+3.701 topm=0.247 cov=0.700
+[3/6] buyhold_best ...
+  (mejor activo en train: AAPL)
+  buyhold_best     seed=42     sharpe=+0.0661 cum=+1.170 topm=0.181 cov=0.033
+  buyhold_best     seed=123    sharpe=+0.0725 cum=+1.285 topm=0.177 cov=0.033
+  buyhold_best     seed=456    sharpe=+0.0588 cum=+1.041 topm=0.191 cov=0.033
+  buyhold_best     seed=789    sharpe=+0.0572 cum=+1.009 topm=0.190 cov=0.033
+  buyhold_best     seed=1024   sharpe=+0.0607 cum=+1.078 topm=0.160 cov=0.033
+[4/6] oracle_expost ...
+  oracle_expost    seed=42     sharpe=+1.4770 cum=+47.940 topm=0.334 cov=1.000
+  oracle_expost    seed=123    sharpe=+1.4630 cum=+48.392 topm=0.341 cov=1.000
+  oracle_expost    seed=456    sharpe=+1.4514 cum=+49.116 topm=0.354 cov=0.967
+  oracle_expost    seed=789    sharpe=+1.4453 cum=+48.440 topm=0.350 cov=1.000
+  oracle_expost    seed=1024   sharpe=+1.4585 cum=+47.987 topm=0.336 cov=0.967
+[5/6] equal_weight ...
+  equal_weight     seed=static sharpe=+0.1008 cum=+0.259 topm=nan cov=1.000
+[6/6] markowitz ...
+  (cartera tangente: 17 activos con peso > 0)
+  markowitz        seed=static sharpe=+0.0924 cum=+0.265 topm=nan cov=0.567
+
+[OK] 22 filas en C:\Localrepo\quantum_ai\outputs\tables\benchmarks_v6.csv

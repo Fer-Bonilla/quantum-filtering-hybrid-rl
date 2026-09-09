@@ -1,0 +1,8 @@
+strategy,sharpe_mean,kind
+Modelo A (PPO puro),0.0496,rl
+Modelo R (máscara azar),0.0471,rl
+Modelo D (DTQW),0.0447,rl
+equal_weight (1/N),0.1008,bench
+momentum_20d,0.1203,bench
+ORACLE-máscara + PPO,1.3241,oracle
+oracle_expost (cota),1.4590,ceiling

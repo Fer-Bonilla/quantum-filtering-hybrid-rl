@@ -1,0 +1,13 @@
+# Configuración cuántica "large" — más pasos DTQW e interferencia profunda.
+
+quantum:
+  k_steps: 5                # ↑ desde 3 (más interferencia entre caminos)
+  m_top: 5                  # ↑ desde 3 (filtro top-m más permisivo)
+  backend: matrix
+  shots: null
+  init_mode: uniform
+  renormalize_threshold: 1.0e-9
+  noise:
+    enabled: false
+    depolarizing_prob: 0.0
+    dephasing_prob: 0.0

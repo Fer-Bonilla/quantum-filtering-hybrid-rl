@@ -1,0 +1,245 @@
+[1/60] R seed=11 ...
+2026-07-20 12:13:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/07/20 12:13:28 INFO mlflow.tracking.fluent: Experiment with name 'campaign_v8_exp3_D' does not exist. Creating a new experiment.
+2026-07-20 12:14:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0057 cand=0.4619 dur=57s
+[2/60] D seed=11 ...
+2026-07-20 12:14:25 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:15:48 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0347 cand=0.4476 dur=85s
+[3/60] R seed=13 ...
+2026-07-20 12:15:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:16:53 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0075 cand=0.4643 dur=64s
+[4/60] D seed=13 ...
+2026-07-20 12:16:54 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:18:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0415 cand=0.4595 dur=87s
+[5/60] R seed=17 ...
+2026-07-20 12:18:22 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:19:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0443 cand=0.4683 dur=70s
+[6/60] D seed=17 ...
+2026-07-20 12:19:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:20:43 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0495 cand=0.4381 dur=73s
+[7/60] R seed=19 ...
+2026-07-20 12:20:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:21:48 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0452 cand=0.4857 dur=64s
+[8/60] D seed=19 ...
+2026-07-20 12:21:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:23:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0479 cand=0.4611 dur=76s
+[9/60] R seed=23 ...
+2026-07-20 12:23:06 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:23:51 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0530 cand=0.4651 dur=46s
+[10/60] D seed=23 ...
+2026-07-20 12:23:52 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:24:59 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0193 cand=0.4373 dur=69s
+[11/60] R seed=29 ...
+2026-07-20 12:25:01 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:26:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0439 cand=0.4643 dur=71s
+[12/60] D seed=29 ...
+2026-07-20 12:26:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:27:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0563 cand=0.4548 dur=83s
+[13/60] R seed=31 ...
+2026-07-20 12:27:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:28:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0499 cand=0.4675 dur=61s
+[14/60] D seed=31 ...
+2026-07-20 12:28:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:29:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0436 cand=0.4444 dur=71s
+[15/60] R seed=37 ...
+2026-07-20 12:29:47 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:30:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0584 cand=0.4675 dur=40s
+[16/60] D seed=37 ...
+2026-07-20 12:30:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:31:16 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0447 cand=0.4619 dur=51s
+[17/60] R seed=41 ...
+2026-07-20 12:31:18 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:32:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0825 cand=0.4357 dur=44s
+[18/60] D seed=41 ...
+2026-07-20 12:32:02 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:33:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0551 cand=0.4437 dur=60s
+[19/60] R seed=43 ...
+2026-07-20 12:33:02 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:34:06 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0493 cand=0.4587 dur=66s
+[20/60] D seed=43 ...
+2026-07-20 12:34:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:35:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0286 cand=0.4437 dur=89s
+[21/60] R seed=47 ...
+2026-07-20 12:35:38 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:36:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0919 cand=0.4429 dur=54s
+[22/60] D seed=47 ...
+2026-07-20 12:36:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:37:54 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0304 cand=0.4468 dur=84s
+[23/60] R seed=53 ...
+2026-07-20 12:37:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:38:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0281 cand=0.4421 dur=64s
+[24/60] D seed=53 ...
+2026-07-20 12:39:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:40:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0559 cand=0.4635 dur=86s
+[25/60] R seed=59 ...
+2026-07-20 12:40:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:41:11 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0751 cand=0.4548 dur=46s
+[26/60] D seed=59 ...
+2026-07-20 12:41:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:42:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0361 cand=0.4484 dur=59s
+[27/60] R seed=61 ...
+2026-07-20 12:42:11 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:43:07 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0510 cand=0.4611 dur=57s
+[28/60] D seed=61 ...
+2026-07-20 12:43:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:44:25 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0444 cand=0.4492 dur=78s
+[29/60] R seed=67 ...
+2026-07-20 12:44:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:45:29 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0382 cand=0.4381 dur=63s
+[30/60] D seed=67 ...
+2026-07-20 12:45:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:46:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0258 cand=0.4389 dur=89s
+[31/60] R seed=71 ...
+2026-07-20 12:47:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:48:05 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0595 cand=0.4452 dur=67s
+[32/60] D seed=71 ...
+2026-07-20 12:48:07 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:49:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0782 cand=0.4460 dur=85s
+[33/60] R seed=73 ...
+2026-07-20 12:49:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:50:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0046 cand=0.4413 dur=64s
+[34/60] D seed=73 ...
+2026-07-20 12:50:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:51:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0011 cand=0.4325 dur=84s
+[35/60] R seed=79 ...
+2026-07-20 12:52:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:53:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0440 cand=0.4698 dur=65s
+[36/60] D seed=79 ...
+2026-07-20 12:53:05 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:54:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0183 cand=0.4389 dur=88s
+[37/60] R seed=83 ...
+2026-07-20 12:54:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:55:39 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0235 cand=0.4690 dur=65s
+[38/60] D seed=83 ...
+2026-07-20 12:55:40 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:56:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0548 cand=0.4579 dur=79s
+[39/60] R seed=89 ...
+2026-07-20 12:57:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:57:55 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=-0.0051 cand=0.4690 dur=56s
+[40/60] D seed=89 ...
+2026-07-20 12:57:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 12:59:22 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0774 cand=0.4405 dur=87s
+[41/60] R seed=97 ...
+2026-07-20 12:59:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:00:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0215 cand=0.4524 dur=64s
+[42/60] D seed=97 ...
+2026-07-20 13:00:29 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:01:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0703 cand=0.4548 dur=89s
+[43/60] R seed=101 ...
+2026-07-20 13:01:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:03:02 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0246 cand=0.4706 dur=65s
+[44/60] D seed=101 ...
+2026-07-20 13:03:03 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:04:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0467 cand=0.4373 dur=86s
+[45/60] R seed=103 ...
+2026-07-20 13:04:29 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:05:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0679 cand=0.4556 dur=44s
+[46/60] D seed=103 ...
+2026-07-20 13:05:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:06:05 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0613 cand=0.4611 dur=52s
+[47/60] R seed=107 ...
+2026-07-20 13:06:06 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:06:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0700 cand=0.4468 dur=40s
+[48/60] D seed=107 ...
+2026-07-20 13:06:47 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:07:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0548 cand=0.4421 dur=72s
+[49/60] R seed=109 ...
+2026-07-20 13:07:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:08:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0298 cand=0.4484 dur=51s
+[50/60] D seed=109 ...
+2026-07-20 13:08:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:09:54 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0235 cand=0.4381 dur=66s
+[51/60] R seed=113 ...
+2026-07-20 13:09:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:11:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0323 cand=0.4643 dur=65s
+[52/60] D seed=113 ...
+2026-07-20 13:11:01 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:12:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0262 cand=0.4595 dur=69s
+[53/60] R seed=127 ...
+2026-07-20 13:12:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:13:01 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0394 cand=0.4698 dur=52s
+[54/60] D seed=127 ...
+2026-07-20 13:13:03 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:14:11 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0078 cand=0.4524 dur=69s
+[55/60] R seed=131 ...
+2026-07-20 13:14:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:14:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0644 cand=0.4460 dur=46s
+[56/60] D seed=131 ...
+2026-07-20 13:14:59 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:16:03 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0046 cand=0.4421 dur=66s
+[57/60] R seed=137 ...
+2026-07-20 13:16:05 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:16:59 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0454 cand=0.4476 dur=55s
+[58/60] D seed=137 ...
+2026-07-20 13:17:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:18:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0252 cand=0.4516 dur=74s
+[59/60] R seed=139 ...
+2026-07-20 13:18:15 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:19:11 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0131 cand=0.4611 dur=57s
+[60/60] D seed=139 ...
+2026-07-20 13:19:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-07-20 13:20:18 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0548 cand=0.4429 dur=68s
+
+[OK] 60 filas en C:\Localrepo\quantum_ai\outputs\tables\tost_extension_v8.csv

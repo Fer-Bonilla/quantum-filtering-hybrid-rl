@@ -1,0 +1,17 @@
+# Configuración por defecto del entorno Gymnasium.
+
+env:
+  feature:
+    window_length: 20
+    volatility_window: 20
+    volume_window: 20
+    return_type: log
+    indicators: []  # ["rsi", "macd", "bb_width"] disponibles
+  split:
+    train_frac: 0.6
+    val_frac: 0.2
+  lambda_risk: 0.1
+  mu_cost: 0.001
+  transaction_cost: 0.0005
+  max_steps: 252         # 1 año bursátil aprox.
+  episode_sampling: random

@@ -1,0 +1,94 @@
+[1/10] Run model=C seed=42 steps=50000 ...
+2026-05-12 14:32:17 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 14:32:17 INFO mlflow.tracking.fluent: Experiment with name 'campaign_sweet_spot_tuning_v2_C' does not exist. Creating a new experiment.
+2026-05-12 14:33:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.2380 sharpe=-0.0394 topm_hit=0.216 cand_hit=0.560 latency=0.97ms duration=62.7s
+[2/10] Run model=C seed=123 steps=50000 ...
+2026-05-12 14:33:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:34:23 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.1489 sharpe=0.0292 topm_hit=0.192 cand_hit=0.540 latency=0.88ms duration=63.4s
+[3/10] Run model=C seed=456 steps=50000 ...
+2026-05-12 14:34:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:35:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.2873 sharpe=-0.0634 topm_hit=0.184 cand_hit=0.512 latency=0.89ms duration=60.4s
+[4/10] Run model=C seed=789 steps=50000 ...
+2026-05-12 14:35:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:36:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.3159 sharpe=0.0583 topm_hit=0.176 cand_hit=0.488 latency=1.06ms duration=68.1s
+[5/10] Run model=C seed=1024 steps=50000 ...
+2026-05-12 14:36:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:37:44 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.1414 sharpe=-0.0236 topm_hit=0.224 cand_hit=0.524 latency=1.15ms duration=72.2s
+[6/10] Run model=D seed=42 steps=50000 ...
+2026-05-12 14:37:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 14:37:45 INFO mlflow.tracking.fluent: Experiment with name 'campaign_sweet_spot_tuning_v2_D' does not exist. Creating a new experiment.
+2026-05-12 14:40:02 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.6241 sharpe=-0.0889 topm_hit=0.156 cand_hit=0.564 latency=2.14ms duration=137.8s
+[7/10] Run model=D seed=123 steps=50000 ...
+2026-05-12 14:40:03 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:42:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.0981 sharpe=-0.0173 topm_hit=0.172 cand_hit=0.564 latency=2.32ms duration=148.0s
+[8/10] Run model=D seed=456 steps=50000 ...
+2026-05-12 14:42:31 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:44:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-1.0453 sharpe=-0.1169 topm_hit=0.096 cand_hit=0.580 latency=3.55ms duration=145.9s
+[9/10] Run model=D seed=789 steps=50000 ...
+2026-05-12 14:44:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:47:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.5966 sharpe=0.0967 topm_hit=0.148 cand_hit=0.484 latency=2.47ms duration=155.9s
+[10/10] Run model=D seed=1024 steps=50000 ...
+2026-05-12 14:47:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:50:07 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.4288 sharpe=-0.0682 topm_hit=0.124 cand_hit=0.480 latency=2.44ms duration=154.1s
+
+[OK] 10 runs escritos en C:\Localrepo\quantum_ai\outputs\tables\sweet_spot_tuning_v2.csv
+--- TUNING DONE ---
+[1/10] Run model=C seed=42 steps=50000 ...
+2026-05-12 14:50:14 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 14:50:14 INFO mlflow.tracking.fluent: Experiment with name 'campaign_sweet_spot_holdout_v2_C' does not exist. Creating a new experiment.
+2026-05-12 14:51:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.1081 sharpe=-0.0219 topm_hit=0.188 cand_hit=0.720 latency=1.03ms duration=72.6s
+[2/10] Run model=C seed=123 steps=50000 ...
+2026-05-12 14:51:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:52:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.5152 sharpe=-0.0942 topm_hit=0.160 cand_hit=0.684 latency=1.12ms duration=74.8s
+[3/10] Run model=C seed=456 steps=50000 ...
+2026-05-12 14:52:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:53:55 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.6039 sharpe=-0.1130 topm_hit=0.168 cand_hit=0.616 latency=1.04ms duration=73.3s
+[4/10] Run model=C seed=789 steps=50000 ...
+2026-05-12 14:53:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:55:07 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.0995 sharpe=-0.0176 topm_hit=0.220 cand_hit=0.648 latency=1.03ms duration=71.7s
+[5/10] Run model=C seed=1024 steps=50000 ...
+2026-05-12 14:55:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 14:56:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.6297 sharpe=-0.1150 topm_hit=0.240 cand_hit=0.676 latency=1.11ms duration=71.4s
+[6/10] Run model=D seed=42 steps=50000 ...
+2026-05-12 14:56:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 14:56:19 INFO mlflow.tracking.fluent: Experiment with name 'campaign_sweet_spot_holdout_v2_D' does not exist. Creating a new experiment.
+2026-05-12 14:58:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.7930 sharpe=0.1452 topm_hit=0.324 cand_hit=0.660 latency=2.31ms duration=151.7s
+[7/10] Run model=D seed=123 steps=50000 ...
+2026-05-12 14:58:51 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:01:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.2523 sharpe=0.0495 topm_hit=0.200 cand_hit=0.704 latency=3.65ms duration=138.9s
+[8/10] Run model=D seed=456 steps=50000 ...
+2026-05-12 15:01:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:03:40 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.1361 sharpe=0.0254 topm_hit=0.308 cand_hit=0.764 latency=3.05ms duration=150.2s
+[9/10] Run model=D seed=789 steps=50000 ...
+2026-05-12 15:03:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:06:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.0074 sharpe=0.0012 topm_hit=0.236 cand_hit=0.724 latency=2.72ms duration=159.2s
+[10/10] Run model=D seed=1024 steps=50000 ...
+2026-05-12 15:06:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:08:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.8783 sharpe=0.1691 topm_hit=0.268 cand_hit=0.684 latency=2.46ms duration=156.7s
+
+[OK] 10 runs escritos en C:\Localrepo\quantum_ai\outputs\tables\sweet_spot_holdout_v2.csv
+--- HOLDOUT DONE ---

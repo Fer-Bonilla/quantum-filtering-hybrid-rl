@@ -1,0 +1,18 @@
+# Modelo B: PPO + rasgos relacionales de G_t (sin subgrafo, sin caminata).
+
+defaults:
+  - ../data/nivel1
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/default
+
+agent:
+  model: B
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_b
+
+seeds: [42, 123, 456]

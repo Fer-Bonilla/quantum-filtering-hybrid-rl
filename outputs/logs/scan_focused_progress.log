@@ -1,0 +1,108 @@
+[1/24] variant=baseline (M=8, k=3, beta=0.0) model=C seed=42
+2026-05-11 21:13:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/11 21:13:33 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_baseline_C' does not exist. Creating a new experiment.
+2026-05-11 21:13:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-24.8091 sharpe=-1.1974 latency=0.81ms duration=10.4s
+[2/24] variant=baseline (M=8, k=3, beta=0.0) model=C seed=123
+2026-05-11 21:13:43 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:13:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-25.4900 sharpe=-1.1833 latency=0.70ms duration=7.0s
+[3/24] variant=baseline (M=8, k=3, beta=0.0) model=C seed=456
+2026-05-11 21:13:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:13:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-24.6894 sharpe=-1.1424 latency=0.74ms duration=7.1s
+[4/24] variant=baseline (M=8, k=3, beta=0.0) model=D seed=42
+2026-05-11 21:13:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:13:58 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_baseline_D' does not exist. Creating a new experiment.
+2026-05-11 21:14:06 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.1158 sharpe=-1.1862 latency=1.09ms duration=10.2s
+[5/24] variant=baseline (M=8, k=3, beta=0.0) model=D seed=123
+2026-05-11 21:14:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:14:16 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.8093 sharpe=-1.2236 latency=1.10ms duration=9.9s
+[6/24] variant=baseline (M=8, k=3, beta=0.0) model=D seed=456
+2026-05-11 21:14:18 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:14:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.3521 sharpe=-1.1806 latency=1.04ms duration=10.1s
+[7/24] variant=s1_beta (M=8, k=3, beta=0.5) model=C seed=42
+2026-05-11 21:14:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:14:28 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s1_beta_C' does not exist. Creating a new experiment.
+2026-05-11 21:14:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-30.0031 sharpe=-1.1712 latency=0.84ms duration=8.2s
+[8/24] variant=s1_beta (M=8, k=3, beta=0.5) model=C seed=123
+2026-05-11 21:14:37 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:14:43 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.7055 sharpe=-1.1193 latency=0.79ms duration=7.9s
+[9/24] variant=s1_beta (M=8, k=3, beta=0.5) model=C seed=456
+2026-05-11 21:14:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:14:52 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.4256 sharpe=-1.1141 latency=0.82ms duration=8.3s
+[10/24] variant=s1_beta (M=8, k=3, beta=0.5) model=D seed=42
+2026-05-11 21:14:53 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:14:53 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s1_beta_D' does not exist. Creating a new experiment.
+2026-05-11 21:15:02 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.6955 sharpe=-1.2114 latency=1.17ms duration=10.9s
+[11/24] variant=s1_beta (M=8, k=3, beta=0.5) model=D seed=123
+2026-05-11 21:15:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:15:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.1254 sharpe=-1.0183 latency=1.10ms duration=10.4s
+[12/24] variant=s1_beta (M=8, k=3, beta=0.5) model=D seed=456
+2026-05-11 21:15:15 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:15:23 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.9315 sharpe=-1.0736 latency=1.10ms duration=9.9s
+[13/24] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=42
+2026-05-11 21:15:25 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:15:25 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s3_M16_beta_C' does not exist. Creating a new experiment.
+2026-05-11 21:15:31 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.1190 sharpe=-1.1122 latency=0.89ms duration=8.1s
+[14/24] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=123
+2026-05-11 21:15:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:15:40 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.0041 sharpe=-1.1313 latency=0.91ms duration=8.0s
+[15/24] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=456
+2026-05-11 21:15:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:15:48 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.2682 sharpe=-1.2660 latency=0.85ms duration=8.1s
+[16/24] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=42
+2026-05-11 21:15:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:15:49 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s3_M16_beta_D' does not exist. Creating a new experiment.
+2026-05-11 21:16:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.9097 sharpe=-1.0888 latency=2.60ms duration=23.3s
+[17/24] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=123
+2026-05-11 21:16:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:16:29 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.6748 sharpe=-1.0719 latency=2.15ms duration=19.5s
+[18/24] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=456
+2026-05-11 21:16:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:16:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-29.7848 sharpe=-1.1712 latency=2.36ms duration=19.3s
+[19/24] variant=s6_full (M=16, k=5, beta=0.5) model=C seed=42
+2026-05-11 21:16:52 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:16:52 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s6_full_C' does not exist. Creating a new experiment.
+2026-05-11 21:17:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.0168 sharpe=-1.1527 latency=0.99ms duration=9.6s
+[20/24] variant=s6_full (M=16, k=5, beta=0.5) model=C seed=123
+2026-05-11 21:17:02 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:17:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.9948 sharpe=-1.1307 latency=0.98ms duration=9.8s
+[21/24] variant=s6_full (M=16, k=5, beta=0.5) model=C seed=456
+2026-05-11 21:17:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:17:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.8028 sharpe=-1.2520 latency=0.98ms duration=10.0s
+[22/24] variant=s6_full (M=16, k=5, beta=0.5) model=D seed=42
+2026-05-11 21:17:22 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/11 21:17:22 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s6_full_D' does not exist. Creating a new experiment.
+2026-05-11 21:17:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-29.5171 sharpe=-1.1260 latency=3.24ms duration=24.3s
+[23/24] variant=s6_full (M=16, k=5, beta=0.5) model=D seed=123
+2026-05-11 21:17:46 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:18:06 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-30.5040 sharpe=-1.1130 latency=2.84ms duration=23.3s
+[24/24] variant=s6_full (M=16, k=5, beta=0.5) model=D seed=456
+2026-05-11 21:18:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:18:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-32.0679 sharpe=-1.2590 latency=2.69ms duration=23.6s
+
+[OK] 24 runs escritos en outputs\tables\scan_focused.csv

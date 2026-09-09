@@ -1,0 +1,27 @@
+# Configuración del entorno v2 (rev. v2 — Fase 1.C + Fase 3.A).
+#
+# Cambios respecto a env/default.yaml:
+#   - lambda_risk = 0.0 (mejor configuración encontrada en la ablación; ver
+#     docs/phase1_results.md). Bajo log_wealth los costos de transacción
+#     bastan como regulador suave.
+#   - reward_type = log_wealth (riesgo descontado en escala logarítmica).
+#   - use_relational_features = false (la activación es por modelo; B v2 la
+#     habilita en su propio override).
+
+env:
+  feature:
+    window_length: 20
+    volatility_window: 20
+    volume_window: 20
+    return_type: log
+    indicators: []
+  split:
+    train_frac: 0.6
+    val_frac: 0.2
+  lambda_risk: 0.0
+  mu_cost: 0.001
+  transaction_cost: 0.0005
+  max_steps: 252
+  episode_sampling: random
+  reward_type: log_wealth
+  use_relational_features: false

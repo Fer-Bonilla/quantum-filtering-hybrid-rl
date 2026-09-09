@@ -1,0 +1,17 @@
+# Modelo A v2: PPO baseline con λ=0 y reward log_wealth (rev. v2).
+
+defaults:
+  - ../data/nivel1
+  - ../env/v2
+  - ../agent/ppo
+
+agent:
+  model: A
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_a_v2
+
+seeds: [42, 123, 456, 789, 1024]

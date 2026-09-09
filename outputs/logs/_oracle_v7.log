@@ -1,0 +1,24 @@
+[1/10] ORACLE seed=42
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+  sharpe=+1.4088 cand_hit=0.718 topm=0.330 cumret=+34.821 dur=46.7s
+[2/10] ORACLE seed=123
+  sharpe=+1.3047 cand_hit=0.720 topm=0.330 cumret=+35.559 dur=42.8s
+[3/10] ORACLE seed=456
+  sharpe=+1.3140 cand_hit=0.733 topm=0.351 cumret=+34.011 dur=34.8s
+[4/10] ORACLE seed=789
+  sharpe=+1.3270 cand_hit=0.728 topm=0.337 cumret=+35.690 dur=38.2s
+[5/10] ORACLE seed=1024
+  sharpe=+1.3905 cand_hit=0.714 topm=0.353 cumret=+33.550 dur=34.0s
+[6/10] ORACLE seed=7
+  sharpe=+1.3164 cand_hit=0.723 topm=0.373 cumret=+34.571 dur=36.0s
+[7/10] ORACLE seed=99
+  sharpe=+1.2344 cand_hit=0.719 topm=0.357 cumret=+34.074 dur=39.5s
+[8/10] ORACLE seed=314
+  sharpe=+1.3201 cand_hit=0.726 topm=0.351 cumret=+35.252 dur=41.7s
+[9/10] ORACLE seed=1729
+  sharpe=+1.2733 cand_hit=0.721 topm=0.352 cumret=+35.473 dur=42.6s
+[10/10] ORACLE seed=65535
+  sharpe=+1.3517 cand_hit=0.713 topm=0.333 cumret=+34.993 dur=46.0s
+
+[OK] 10 runs en C:\Localrepo\quantum_ai\outputs\tables\oracle_v7.csv

@@ -1,0 +1,17 @@
+# Modelo A: PPO discreto baseline (sin grafo, sin módulo local).
+
+defaults:
+  - ../data/nivel1
+  - ../env/default
+  - ../agent/ppo
+
+agent:
+  model: A
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_a
+
+seeds: [42, 123, 456]

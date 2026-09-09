@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software or its results, please cite the thesis."
+type: software
+title: "Priorización por filtrado cuántico estructurado sobre subgrafos dinámicos en RL híbrido para selección de activos — código, datos y resultados"
+authors:
+  - family-names: "Bonilla Suárez"
+    given-names: "Oscar Fernando"
+version: "1.0.0"
+date-released: "2026-09-08"
+repository-code: "https://github.com/Fer-Bonilla/quantum-filtering-hybrid-rl"
+license: MIT
+keywords:
+  - quantum computing
+  - reinforcement learning
+  - quantum walks
+  - DTQW
+  - PPO
+  - asset selection
+  - reproducibility
+preferred-citation:
+  type: thesis
+  title: "Priorización por filtrado cuántico estructurado sobre subgrafos dinámicos en RL híbrido para selección de activos"
+  authors:
+    - family-names: "Bonilla Suárez"
+      given-names: "Oscar Fernando"
+  institution: "Universidad Internacional de La Rioja (UNIR), Máster en Computación Cuántica"
+  year: 2026

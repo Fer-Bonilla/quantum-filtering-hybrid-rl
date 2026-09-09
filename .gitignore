@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# uv / venv
+.venv/
+.uv/
+
+# Derivados regenerables
+data/interim/
+data/processed/
+
+# Salidas voluminosas no versionadas (los CSV y figuras SI se versionan)
+outputs/mlruns/
+outputs/checkpoints/
+
+# Jupyter / IDE / OS
+.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,20 @@
+# Modelo C con configuración escalada (Nivel 2, M=16, k=5, β=0.5).
+# Sirve como control directo del Modelo D bajo idénticas condiciones de grafo.
+
+defaults:
+  - ../data/nivel2
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/large
+  - ../quantum/large
+
+agent:
+  model: C
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_c_large
+
+seeds: [42, 123, 456, 789, 1024]

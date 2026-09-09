@@ -1,0 +1,56 @@
+[1/12] profile=ideal (depol=0.0, dephas=0.0) seed=42 M=8
+2026-05-12 19:32:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 19:32:41 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_ideal_C_C' does not exist. Creating a new experiment.
+2026-05-12 19:32:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0186 sharpe=0.0048 latency=0.73ms duration=9.3s
+[2/12] profile=ideal (depol=0.0, dephas=0.0) seed=123 M=8
+2026-05-12 19:32:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:32:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0680 sharpe=0.0206 latency=0.73ms duration=6.8s
+[3/12] profile=ideal (depol=0.0, dephas=0.0) seed=456 M=8
+2026-05-12 19:32:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0450 sharpe=0.0118 latency=0.73ms duration=7.2s
+[4/12] profile=depol=0.05 (depol=0.05, dephas=0.0) seed=42 M=8
+2026-05-12 19:33:05 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 19:33:05 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_depol=0.05_C_C' does not exist. Creating a new experiment.
+2026-05-12 19:33:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0186 sharpe=0.0048 latency=1.36ms duration=7.4s
+[5/12] profile=depol=0.05 (depol=0.05, dephas=0.0) seed=123 M=8
+2026-05-12 19:33:12 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0680 sharpe=0.0206 latency=0.58ms duration=6.6s
+[6/12] profile=depol=0.05 (depol=0.05, dephas=0.0) seed=456 M=8
+2026-05-12 19:33:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0450 sharpe=0.0118 latency=0.58ms duration=5.4s
+[7/12] profile=depol=0.10 (depol=0.1, dephas=0.0) seed=42 M=8
+2026-05-12 19:33:25 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 19:33:25 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_depol=0.10_C_C' does not exist. Creating a new experiment.
+2026-05-12 19:33:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0186 sharpe=0.0048 latency=0.56ms duration=5.3s
+[8/12] profile=depol=0.10 (depol=0.1, dephas=0.0) seed=123 M=8
+2026-05-12 19:33:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0680 sharpe=0.0206 latency=0.60ms duration=5.4s
+[9/12] profile=depol=0.10 (depol=0.1, dephas=0.0) seed=456 M=8
+2026-05-12 19:33:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0450 sharpe=0.0118 latency=0.58ms duration=5.4s
+[10/12] profile=dephas=0.05 (depol=0.0, dephas=0.05) seed=42 M=8
+2026-05-12 19:33:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 19:33:41 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_dephas=0.05_C_C' does not exist. Creating a new experiment.
+2026-05-12 19:33:47 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0186 sharpe=0.0048 latency=0.61ms duration=5.6s
+[11/12] profile=dephas=0.05 (depol=0.0, dephas=0.05) seed=123 M=8
+2026-05-12 19:33:47 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:52 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0680 sharpe=0.0206 latency=0.57ms duration=5.4s
+[12/12] profile=dephas=0.05 (depol=0.0, dephas=0.05) seed=456 M=8
+2026-05-12 19:33:53 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 19:33:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0450 sharpe=0.0118 latency=0.58ms duration=5.3s
+
+[OK] 12 runs en outputs\tables\abl_nisq_v5_C.csv

@@ -1,0 +1,19 @@
+# Modelo C v2: PPO + subgrafo H_t + caminata clásica con λ=0 y log_wealth.
+
+defaults:
+  - ../data/nivel1
+  - ../env/v2
+  - ../agent/ppo
+  - ../graph/default
+  - ../quantum/default
+
+agent:
+  model: C
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_c_v2
+
+seeds: [42, 123, 456, 789, 1024]

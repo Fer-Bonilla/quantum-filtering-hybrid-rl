@@ -1,0 +1,64 @@
+=== R campaign ===
+[1/10] variant=R seed=42
+2026-06-09 17:55:17 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026-06-09 17:56:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0882 cand_hit=0.454 topm=0.190 cov=1.000 lat=0.78ms dur=53.3s
+[2/10] variant=R seed=123
+2026-06-09 17:56:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 17:57:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0212 cand_hit=0.465 topm=0.193 cov=1.000 lat=0.70ms dur=55.1s
+[3/10] variant=R seed=456
+2026-06-09 17:57:06 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 17:57:59 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0563 cand_hit=0.455 topm=0.194 cov=1.000 lat=0.74ms dur=55.0s
+[4/10] variant=R seed=789
+2026-06-09 17:58:01 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 17:58:55 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0281 cand_hit=0.456 topm=0.179 cov=0.967 lat=0.70ms dur=55.5s
+[5/10] variant=R seed=1024
+2026-06-09 17:58:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 17:59:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0464 cand_hit=0.437 topm=0.183 cov=1.000 lat=0.74ms dur=54.5s
+[6/10] variant=R seed=7
+2026-06-09 17:59:51 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:00:48 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0630 cand_hit=0.440 topm=0.184 cov=1.000 lat=0.78ms dur=57.7s
+[7/10] variant=R seed=99
+2026-06-09 18:00:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:01:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0365 cand_hit=0.473 topm=0.192 cov=1.000 lat=0.70ms dur=53.5s
+[8/10] variant=R seed=314
+2026-06-09 18:01:43 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:02:38 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0484 cand_hit=0.444 topm=0.189 cov=0.967 lat=0.75ms dur=56.2s
+[9/10] variant=R seed=1729
+2026-06-09 18:02:39 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:03:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0491 cand_hit=0.486 topm=0.193 cov=1.000 lat=0.81ms dur=56.9s
+[10/10] variant=R seed=65535
+2026-06-09 18:03:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:04:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0337 cand_hit=0.471 topm=0.175 cov=1.000 lat=0.75ms dur=57.8s
+
+[OK] 10 runs en C:\Localrepo\quantum_ai\outputs\tables\variant_R_v6.csv
+=== R DONE ===
+=== Q campaign ===
+Installed 165 packages in 6.68s
+[1/10] variant=Q seed=42
+2026-06-09 18:04:55 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026-06-09 18:08:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0070 cand_hit=0.431 topm=0.176 cov=0.833 lat=3.00ms dur=198.2s
+[2/10] variant=Q seed=123
+2026-06-09 18:08:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:11:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0379 cand_hit=0.449 topm=0.190 cov=0.900 lat=3.43ms dur=175.5s
+[3/10] variant=Q seed=456
+2026-06-09 18:11:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-06-09 18:14:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  sharpe=+0.0804 cand_hit=0.454 topm=0.206 cov=0.900 lat=4.02ms dur=206.9s
+[4/10] variant=Q seed=789
+2026-06-09 18:14:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL

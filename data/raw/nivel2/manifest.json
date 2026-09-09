@@ -1,0 +1,283 @@
+{
+  "auto_adjust": true,
+  "downloaded_at_utc": "2026-05-12T04:11:51Z",
+  "end_date": "2024-12-31",
+  "entries": [
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\AAPL.parquet",
+      "rows": 1760,
+      "sha256": "eb1bda9979faa8ac9352684f6db96a02d5fdc078f81cd4944862615f0b26bcba",
+      "start": "2018-01-02",
+      "ticker": "AAPL"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\ADBE.parquet",
+      "rows": 1760,
+      "sha256": "f6508e25f0ec67a480c64d1fef40227309d33b2b3370de2fe58e566139b80ace",
+      "start": "2018-01-02",
+      "ticker": "ADBE"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\AMZN.parquet",
+      "rows": 1760,
+      "sha256": "39371100204911384e96606424d7adf57c38ab2cf4714b368c8b46ce7b9acd9c",
+      "start": "2018-01-02",
+      "ticker": "AMZN"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\BA.parquet",
+      "rows": 1760,
+      "sha256": "e43738dee6812751f33fd8d7e69f7aa37ea08b95c5f3deda405a5b92eae30a8a",
+      "start": "2018-01-02",
+      "ticker": "BA"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\CAT.parquet",
+      "rows": 1760,
+      "sha256": "6e4d9c5cbda076416247a990b5ce8dd13a4d5dbe6cbc5c6421313f2d7a15bd16",
+      "start": "2018-01-02",
+      "ticker": "CAT"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\CRM.parquet",
+      "rows": 1760,
+      "sha256": "e5e71bbaef27d036f98857afbb97a7e4a972f0d7b04f6c47d64d01e282073c55",
+      "start": "2018-01-02",
+      "ticker": "CRM"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\CVX.parquet",
+      "rows": 1760,
+      "sha256": "ed917d531c4af5fa5c48c922fe576c19f5338d72826f52dafa03e19faafb65f3",
+      "start": "2018-01-02",
+      "ticker": "CVX"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\GOOGL.parquet",
+      "rows": 1760,
+      "sha256": "de326b13a45e47127711fe47844338419dea07fb4ed4d468a515d94d8310537b",
+      "start": "2018-01-02",
+      "ticker": "GOOGL"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\GS.parquet",
+      "rows": 1760,
+      "sha256": "6e988457382a98d2d78fa5c67768d867e716b96b7e39daddf0b67619e5ba3673",
+      "start": "2018-01-02",
+      "ticker": "GS"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\HD.parquet",
+      "rows": 1760,
+      "sha256": "7a258baa5ed28de03bceffd815daf44128c02e7e4f9b5ae48d8e1747a6f1f690",
+      "start": "2018-01-02",
+      "ticker": "HD"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\JNJ.parquet",
+      "rows": 1760,
+      "sha256": "a7433b54d07d2f1a4c9d162260f8217d992ddd02926c282c1f689ec43b378628",
+      "start": "2018-01-02",
+      "ticker": "JNJ"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\JPM.parquet",
+      "rows": 1760,
+      "sha256": "e65fdc0ea6a322f0ae3cdcc1a45c8fd9d5fb6c760ffb75f6afc84ab7dff6eebe",
+      "start": "2018-01-02",
+      "ticker": "JPM"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\KO.parquet",
+      "rows": 1760,
+      "sha256": "ce88a02669d883edb32b61e65bad3d977fdf7efc04b45023c0867da070c9276d",
+      "start": "2018-01-02",
+      "ticker": "KO"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\LIN.parquet",
+      "rows": 1760,
+      "sha256": "3f37ef46e8c4f0bfe084b3183f00727f70bb84c0886165e4978dd146252df958",
+      "start": "2018-01-02",
+      "ticker": "LIN"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\LLY.parquet",
+      "rows": 1760,
+      "sha256": "f5d4d30d0297d3901f37e55deabd67e052032cd27bd49be2168ac39571448e6f",
+      "start": "2018-01-02",
+      "ticker": "LLY"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\MA.parquet",
+      "rows": 1760,
+      "sha256": "bbc713413260159f8d743440f6d3579cf8f3f58bacbd34b59c8e1e9f5ee23760",
+      "start": "2018-01-02",
+      "ticker": "MA"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\META.parquet",
+      "rows": 1760,
+      "sha256": "b124556b8f028caac9cda2f78e88f7066f019b3291f01457eeb4d2954da5fd2e",
+      "start": "2018-01-02",
+      "ticker": "META"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\MSFT.parquet",
+      "rows": 1760,
+      "sha256": "ac7060be0d4debff5636f478a330e1eefc5dab9bd76035843c2ff5c2b8528139",
+      "start": "2018-01-02",
+      "ticker": "MSFT"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\NEE.parquet",
+      "rows": 1760,
+      "sha256": "54bf81c0b69264905a0c48a9b50597f9dfd13d32e6a9cf6208ac2a0dfb44039c",
+      "start": "2018-01-02",
+      "ticker": "NEE"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\NFLX.parquet",
+      "rows": 1760,
+      "sha256": "4f732157810ccc49f59c7ba1be6bbcd3eb6dd01db5c21b8a9941b6ca5659107f",
+      "start": "2018-01-02",
+      "ticker": "NFLX"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\NKE.parquet",
+      "rows": 1760,
+      "sha256": "6d4a2dfd043a93ff6277c04e406336731e8dcd87b698053525ada178bc3c1e6c",
+      "start": "2018-01-02",
+      "ticker": "NKE"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\NVDA.parquet",
+      "rows": 1760,
+      "sha256": "e89a80fc2b0c065f8ea6bc4b382a1d0b2fe68e4986759dc7a6b2fbd9e5da54ff",
+      "start": "2018-01-02",
+      "ticker": "NVDA"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\ORCL.parquet",
+      "rows": 1760,
+      "sha256": "425d02e5ee33d0c7514c36a841fb47a91aec1619eeae0c67753ac74fcf64cb6c",
+      "start": "2018-01-02",
+      "ticker": "ORCL"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\PFE.parquet",
+      "rows": 1760,
+      "sha256": "61c4148c02007064bd44912a536707ffcb71ba2c76bbe5368dabc5076d63e9d1",
+      "start": "2018-01-02",
+      "ticker": "PFE"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\PG.parquet",
+      "rows": 1760,
+      "sha256": "97fdb83da9c5e5fe064d8b5d7d0f9d8dbafe8d2bceaa9864ed83806ce1c9a8ac",
+      "start": "2018-01-02",
+      "ticker": "PG"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\TSLA.parquet",
+      "rows": 1760,
+      "sha256": "6d052b94db58d7f5a4ab754c35fe532e661af515422b3ea664900290f6d829ea",
+      "start": "2018-01-02",
+      "ticker": "TSLA"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\UNH.parquet",
+      "rows": 1760,
+      "sha256": "bac61507d3ac02450f615d177cc3c074d86a3a850aa28adcdc640d83a2adb803",
+      "start": "2018-01-02",
+      "ticker": "UNH"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\V.parquet",
+      "rows": 1760,
+      "sha256": "f099f30c5637697ff97592dcb5829774b80838922cfe2101efbf55b97f5181ae",
+      "start": "2018-01-02",
+      "ticker": "V"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\WMT.parquet",
+      "rows": 1760,
+      "sha256": "6f57cfb0e6981a7eb75f368f69c4c729f20bfbb9cbb58a243b1f97f9940c0d5a",
+      "start": "2018-01-02",
+      "ticker": "WMT"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel2\\XOM.parquet",
+      "rows": 1760,
+      "sha256": "880bcf694bee7093519a56c81b0f156d38f1799dc95005b77d0d9db2252b4576",
+      "start": "2018-01-02",
+      "ticker": "XOM"
+    }
+  ],
+  "interval": "1d",
+  "start_date": "2018-01-02",
+  "tickers": [
+    "AAPL",
+    "ADBE",
+    "AMZN",
+    "BA",
+    "CAT",
+    "CRM",
+    "CVX",
+    "GOOGL",
+    "GS",
+    "HD",
+    "JNJ",
+    "JPM",
+    "KO",
+    "LIN",
+    "LLY",
+    "MA",
+    "META",
+    "MSFT",
+    "NEE",
+    "NFLX",
+    "NKE",
+    "NVDA",
+    "ORCL",
+    "PFE",
+    "PG",
+    "TSLA",
+    "UNH",
+    "V",
+    "WMT",
+    "XOM"
+  ],
+  "universe": "nivel2",
+  "yfinance_version": "1.3.0"
+}

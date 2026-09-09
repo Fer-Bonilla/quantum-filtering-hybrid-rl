@@ -1,0 +1,37 @@
+\begin{table}[H]
+\centering
+\small
+\caption{Bootstrap pareado de las variantes v6 (R, Q) contra C, D y entre sí (5000 iter, Bonferroni k=11).}
+\label{tab:tabla_pareado}
+\begin{tabular}{lrrrrrr}
+\toprule
+Comparación & Métrica & mean diff & IC95% & P(>0) & p\_Bonf & Sig. \\
+\midrule
+R-C & sharpe\_ratio & +0.006 & [-0.016, +0.028] & 0.688 & 1.000 & — \\
+R-C & episodes\_to\_convergence & -8.333 & [-13.333, -3.667] & 0.000 & 0.000 & Sí \\
+R-C & topm\_hit\_rate & +0.009 & [-0.001, +0.020] & 0.959 & 0.898 & — \\
+R-C & candidate\_hit\_rate & +0.029 & [+0.018, +0.041] & 1.000 & 0.000 & Sí \\
+R-C & asset\_coverage & +0.103 & [+0.087, +0.123] & 1.000 & 0.000 & Sí \\
+R-D & sharpe\_ratio & +0.002 & [-0.013, +0.017] & 0.629 & 1.000 & — \\
+R-D & episodes\_to\_convergence & -6.400 & [-10.000, -3.200] & 0.000 & 0.000 & Sí \\
+R-D & topm\_hit\_rate & +0.004 & [-0.001, +0.010] & 0.927 & 1.000 & — \\
+R-D & candidate\_hit\_rate & +0.010 & [-0.001, +0.022] & 0.956 & 0.964 & — \\
+R-D & asset\_coverage & +0.140 & [+0.120, +0.167] & 1.000 & 0.000 & Sí \\
+Q-C & sharpe\_ratio & -0.008 & [-0.031, +0.011] & 0.242 & 1.000 & — \\
+Q-C & episodes\_to\_convergence & +1.333 & [+0.000, +2.833] & 0.956 & 0.977 & — \\
+Q-C & topm\_hit\_rate & -0.017 & [-0.027, -0.007] & 0.000 & 0.009 & Sí \\
+Q-C & candidate\_hit\_rate & -0.040 & [-0.042, -0.039] & 0.000 & 0.000 & Sí \\
+Q-C & asset\_coverage & +0.070 & [+0.047, +0.090] & 1.000 & 0.000 & Sí \\
+Q-D & sharpe\_ratio & -0.011 & [-0.035, +0.013] & 0.189 & 1.000 & — \\
+Q-D & episodes\_to\_convergence & +1.667 & [-1.167, +4.000] & 0.878 & 1.000 & — \\
+Q-D & topm\_hit\_rate & -0.022 & [-0.029, -0.014] & 0.000 & 0.000 & Sí \\
+Q-D & candidate\_hit\_rate & -0.060 & [-0.062, -0.057] & 0.000 & 0.000 & Sí \\
+Q-D & asset\_coverage & +0.107 & [+0.083, +0.130] & 1.000 & 0.000 & Sí \\
+Q-R & sharpe\_ratio & -0.014 & [-0.040, +0.013] & 0.162 & 1.000 & — \\
+Q-R & episodes\_to\_convergence & +10.833 & [+7.500, +14.667] & 1.000 & 0.000 & Sí \\
+Q-R & topm\_hit\_rate & -0.026 & [-0.036, -0.017] & 0.000 & 0.000 & Sí \\
+Q-R & candidate\_hit\_rate & -0.069 & [-0.080, -0.059] & 0.000 & 0.000 & Sí \\
+Q-R & asset\_coverage & -0.033 & [-0.050, -0.013] & 0.000 & 0.004 & Sí \\
+\bottomrule
+\end{tabular}
+\end{table}

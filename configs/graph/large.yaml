@@ -1,0 +1,13 @@
+# Configuración de grafo "large" para Nivel 2 con afinidad sectorial activa.
+# Diseñado para amplificar la señal cuántica: M=16, β=0.5, k_neighbors mayor.
+
+graph:
+  alpha: 0.5                # ↓ peso correlación (antes 1.0)
+  beta: 0.5                 # ↑ peso afinidad sectorial (antes 0.0)
+  eps: 1.0e-8
+  lookback_window: 60
+  k_neighbors: 10           # ↑ para evitar subgrafos aislados con M grande
+  sym_mode: avg
+  subgraph_max_size: 16     # ↑ desde 8 (ventaja teórica √M de 2.83 → 4.0)
+  seed_score_window: 20
+  update_frequency: 1

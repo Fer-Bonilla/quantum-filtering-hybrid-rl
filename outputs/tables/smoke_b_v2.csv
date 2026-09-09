@@ -1,0 +1,2 @@
+campaign_id,model,seed,universe,total_steps,cumulative_return,sharpe_ratio,max_drawdown,mean_reward,asset_coverage,topm_hit_rate,candidate_hit_rate,time_to_first_promising,mean_latency_ms,episodes_to_convergence,train_reward_last,train_reward_mean,n_train_steps,timestamp_utc,duration_seconds
+smoke_b_v2,B,42,nivel2,1000,-0.17527362998211546,-0.04553090576093933,0.24473930580745293,-0.0350547259964231,1.0,0.17,1.0,11.0,0.3750755012151785,-1.0,0.035767528089859474,0.035767528089859474,1000,2026-05-12T20:35:04Z,4.270463799999561

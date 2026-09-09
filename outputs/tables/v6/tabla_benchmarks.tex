@@ -1,0 +1,18 @@
+\begin{table}[H]
+\centering
+\small
+\caption{Benchmarks clásicos y solución óptima (oracle). Sharpe por step comparable con los agentes RL.}
+\label{tab:tabla_benchmarks}
+\begin{tabular}{lrrrr}
+\toprule
+Estrategia & Familia & Sharpe & topm\_hit & coverage \\
+\midrule
+oracle\_expost & discrete policy & +1.459 & 0.343 & 0.987 \\
+momentum\_20d & discrete policy & +0.120 & 0.241 & 0.693 \\
+equal\_weight & static portfolio & +0.101 & — & 1.000 \\
+markowitz & static portfolio & +0.092 & — & 0.567 \\
+buyhold\_best & discrete policy & +0.063 & 0.180 & 0.033 \\
+random & discrete policy & +0.062 & 0.201 & 1.000 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,66 @@
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/11 21:23:21 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s3_M16_beta_A' does not exist. Creating a new experiment.
+2026/05/11 21:26:38 INFO mlflow.tracking.fluent: Experiment with name 'campaign_scan_s3_M16_beta_B' does not exist. Creating a new experiment.
+[1/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=A seed=42
+        return=-26.8291 sharpe=-1.0698 latency=0.50ms duration=38.1s
+[2/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=A seed=123
+        return=-26.9021 sharpe=-1.1057 latency=0.56ms duration=40.0s
+[3/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=A seed=456
+        return=-25.9288 sharpe=-1.0623 latency=0.45ms duration=39.5s
+[4/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=A seed=789
+        return=-28.0772 sharpe=-1.1411 latency=0.51ms duration=38.6s
+[5/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=A seed=1024
+        return=-26.7076 sharpe=-1.1910 latency=0.49ms duration=39.8s
+[6/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=B seed=42
+        return=-26.8291 sharpe=-1.0698 latency=0.46ms duration=39.9s
+[7/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=B seed=123
+        return=-26.9021 sharpe=-1.1057 latency=0.48ms duration=40.1s
+[8/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=B seed=456
+        return=-25.9288 sharpe=-1.0623 latency=0.49ms duration=40.1s
+[9/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=B seed=789
+        return=-28.0772 sharpe=-1.1411 latency=0.54ms duration=40.9s
+[10/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=B seed=1024
+        return=-26.7076 sharpe=-1.1910 latency=0.45ms duration=40.0s
+[11/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=42
+2026-05-11 21:30:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:31:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-25.2517 sharpe=-1.1750 latency=1.15ms duration=70.1s
+[12/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=123
+2026-05-11 21:31:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:32:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.1559 sharpe=-1.2201 latency=1.00ms duration=71.0s
+[13/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=456
+2026-05-11 21:32:21 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:33:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.0223 sharpe=-1.1927 latency=1.01ms duration=70.3s
+[14/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=789
+2026-05-11 21:33:32 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:34:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-24.6516 sharpe=-1.2071 latency=1.08ms duration=71.5s
+[15/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=C seed=1024
+2026-05-11 21:34:44 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:35:44 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-28.4411 sharpe=-1.0922 latency=0.88ms duration=61.3s
+[16/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=42
+2026-05-11 21:35:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:37:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.6993 sharpe=-1.1780 latency=2.32ms duration=134.7s
+[17/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=123
+2026-05-11 21:38:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:40:11 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.1036 sharpe=-1.2417 latency=2.36ms duration=134.2s
+[18/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=456
+2026-05-11 21:40:14 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:42:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-23.9981 sharpe=-1.1801 latency=2.16ms duration=132.8s
+[19/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=789
+2026-05-11 21:42:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:44:36 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-27.3530 sharpe=-1.2519 latency=2.17ms duration=132.0s
+[20/20] variant=s3_M16_beta (M=16, k=3, beta=0.5) model=D seed=1024
+2026-05-11 21:44:39 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-11 21:46:46 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-26.6551 sharpe=-1.1724 latency=2.16ms duration=129.8s
+
+[OK] 20 runs escritos en outputs\tables\sweet_spot.csv

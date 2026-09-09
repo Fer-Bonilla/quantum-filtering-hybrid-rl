@@ -1,0 +1,23 @@
+# Ablación 4 (Sec. 8.20.4): Modelo D con inicialización uniforme.
+# Comparable contra ablation_init_seed_centered.yaml.
+
+defaults:
+  - ../data/nivel1
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/default
+  - ../quantum/default
+
+agent:
+  model: D
+
+quantum:
+  init_mode: uniform
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: ablation_init_uniform
+
+seeds: [42, 123, 456, 789, 1024]

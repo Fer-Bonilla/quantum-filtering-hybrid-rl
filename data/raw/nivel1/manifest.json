@@ -1,0 +1,148 @@
+{
+  "auto_adjust": true,
+  "downloaded_at_utc": "2026-05-12T03:22:11Z",
+  "end_date": "2024-12-31",
+  "entries": [
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\AAPL.parquet",
+      "rows": 1760,
+      "sha256": "4e8612cb61ed769d39c268dea5bb6d2e925d812cccc2e4e57352da7c6a52ae63",
+      "start": "2018-01-02",
+      "ticker": "AAPL"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\AMZN.parquet",
+      "rows": 1760,
+      "sha256": "39371100204911384e96606424d7adf57c38ab2cf4714b368c8b46ce7b9acd9c",
+      "start": "2018-01-02",
+      "ticker": "AMZN"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\CAT.parquet",
+      "rows": 1760,
+      "sha256": "f78a2234ee0ca0c60c05b9ed0b9dbd0bf746ed2c8a53906bd2f657e4be96d8e7",
+      "start": "2018-01-02",
+      "ticker": "CAT"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\GOOGL.parquet",
+      "rows": 1760,
+      "sha256": "8b65fb06559dbeb016c99a0470decbb6feeb7694c4b642da72e8929118aa4f3f",
+      "start": "2018-01-02",
+      "ticker": "GOOGL"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\JNJ.parquet",
+      "rows": 1760,
+      "sha256": "38aff7d2fc21d97171a2d554588edaed3aedcaadbf5c436f3b99eb26b0348ee3",
+      "start": "2018-01-02",
+      "ticker": "JNJ"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\JPM.parquet",
+      "rows": 1760,
+      "sha256": "06d8d05b7b0a8ec44d4759aa10d41cf87f5c7212fe820e914d4a744c47900bba",
+      "start": "2018-01-02",
+      "ticker": "JPM"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\KO.parquet",
+      "rows": 1760,
+      "sha256": "d4eed2bd538c30caea9d3697b427ada92fcfad3d0d6aab51ab6ce7ef5555db16",
+      "start": "2018-01-02",
+      "ticker": "KO"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\LIN.parquet",
+      "rows": 1760,
+      "sha256": "f810593670d802f557f50bdfa5ba67aca78c434a329db7c24ca9efb97cdb82c6",
+      "start": "2018-01-02",
+      "ticker": "LIN"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\MSFT.parquet",
+      "rows": 1760,
+      "sha256": "ed634e9960b4698124d3ed05358935f42002f52a195d572d9941188522837a27",
+      "start": "2018-01-02",
+      "ticker": "MSFT"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\NEE.parquet",
+      "rows": 1760,
+      "sha256": "00c7ae92e9d7cf670343b14111bb9e64f38c17cf067aa47d9631b9f5f13222a8",
+      "start": "2018-01-02",
+      "ticker": "NEE"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\NVDA.parquet",
+      "rows": 1760,
+      "sha256": "94d298b7ac7366dcd2f678f996f56f32a93583790d3560958a5280a38c6ae280",
+      "start": "2018-01-02",
+      "ticker": "NVDA"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\TSLA.parquet",
+      "rows": 1760,
+      "sha256": "6d052b94db58d7f5a4ab754c35fe532e661af515422b3ea664900290f6d829ea",
+      "start": "2018-01-02",
+      "ticker": "TSLA"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\UNH.parquet",
+      "rows": 1760,
+      "sha256": "fff3f7312d59f47d8eaa3b24eea20e6d795fcd414a33524fd446b5477ea4ff0b",
+      "start": "2018-01-02",
+      "ticker": "UNH"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\V.parquet",
+      "rows": 1760,
+      "sha256": "334f115162c14851b2eb5fbeff885d2019274bf925bd32a568c209c765231101",
+      "start": "2018-01-02",
+      "ticker": "V"
+    },
+    {
+      "end": "2024-12-30",
+      "file_path": "raw\\nivel1\\XOM.parquet",
+      "rows": 1760,
+      "sha256": "c60e8d02adcc7660adf518d691e9f9d15cde5e7e3dae211640d36d64a97fedae",
+      "start": "2018-01-02",
+      "ticker": "XOM"
+    }
+  ],
+  "interval": "1d",
+  "start_date": "2018-01-02",
+  "tickers": [
+    "AAPL",
+    "AMZN",
+    "CAT",
+    "GOOGL",
+    "JNJ",
+    "JPM",
+    "KO",
+    "LIN",
+    "MSFT",
+    "NEE",
+    "NVDA",
+    "TSLA",
+    "UNH",
+    "V",
+    "XOM"
+  ],
+  "universe": "nivel1",
+  "yfinance_version": "1.3.0"
+}

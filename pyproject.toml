@@ -1,0 +1,142 @@
+[project]
+name = "quantum-ai"
+version = "0.1.0"
+description = "Exploración cuántica estructurada en aprendizaje por refuerzo híbrido para selección de activos (Tesis Master Computación Cuántica - UNIR 2026)"
+authors = [
+    { name = "Oscar Fernando Bonilla Suarez" },
+]
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "MIT" }
+keywords = ["quantum-computing", "reinforcement-learning", "portfolio-selection", "quantum-walks", "DTQW", "PPO"]
+dependencies = [
+    "gymnasium>=1.3.0",
+    "matplotlib>=3.10.9",
+    "mlflow>=3.12.0",
+    "networkx>=3.6.1",
+    "numpy>=2.4.4",
+    "pandas>=2.2,<3",
+    "pennylane>=0.44.1",
+    "pyarrow>=20.0.0",
+    "pydantic>=2.13.4",
+    "pyyaml>=6.0.3",
+    "qiskit>=2.4.1",
+    "qiskit-aer>=0.17.2",
+    "scipy>=1.17.1",
+    "torch>=2.11.0",
+    "typer>=0.25.1",
+    "yfinance>=1.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "ipykernel>=6.30.0",
+    "mypy>=1.16.0",
+    "pytest>=9.0.3",
+    "pytest-cov>=6.1.0",
+    "ruff>=0.15.12",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.pytest.ini_options]
+minversion = "9.0"
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+    "--showlocals",
+]
+markers = [
+    "slow: tests que tardan > 5s (excluir con -m 'not slow')",
+    "integration: tests de integración end-to-end",
+    "quantum: tests específicos del módulo cuántico (requieren PennyLane)",
+]
+filterwarnings = [
+    "error",
+    "ignore::DeprecationWarning:yfinance.*",
+    "ignore::DeprecationWarning:pennylane.*",
+    "ignore::PendingDeprecationWarning",
+    # gymnasium check_env emite UserWarning informativos sobre Box unbounded;
+    # nuestras features (retornos, vol) NO tienen bounds finitos naturales.
+    "ignore:.*Box observation space.*:UserWarning",
+    "ignore:.*The environment .* is out of date.*:UserWarning",
+]
+
+[tool.coverage.run]
+source = ["src"]
+branch = true
+omit = ["src/main.py", "*/__init__.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # isort
+    "B",        # flake8-bugbear
+    "UP",       # pyupgrade
+    "N",        # pep8-naming
+    "SIM",      # flake8-simplify
+    "RET",      # flake8-return
+    "PTH",      # flake8-use-pathlib (FORZAR pathlib en lugar de os.path)
+    "RUF",      # ruff-specific
+    "NPY",      # numpy-specific
+    "PD",       # pandas-vet
+]
+ignore = [
+    "E501",     # line-too-long (gestionado por formatter)
+    "N803",     # nombres de argumentos en mayúsculas (X, W son convenciones matemáticas)
+    "N806",     # variables locales en mayúsculas (idem)
+    "N812",     # import torch.nn.functional as F (convención PyTorch)
+    "NPY002",   # np.random.seed se usa intencionalmente en seed_utils para legacy compat
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = [
+    "S101",      # asserts permitidos en tests
+    "B011",
+    "N802",      # nombres de tests pueden incluir mayúsculas matemáticas (test_build_uses_last_L_rows)
+    "NPY002",    # tests de determinismo verifican el API legacy np.random.random
+    "RUF002", "RUF003",  # caracteres unicode permitidos en docstrings de tests
+    "N812",
+]
+"notebooks/**" = ["E402", "F401"]   # imports en notebooks pueden estar mezclados
+"src/main.py" = ["B008"]   # typer requiere Option(...) en defaults
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+python_version = "3.13"
+strict = false                  # arrancar permisivo, endurecer después
+warn_return_any = true
+warn_unused_configs = true
+warn_unused_ignores = true
+warn_redundant_casts = true
+disallow_untyped_defs = false   # endurecer en semana 3+
+exclude = ["notebooks/", "outputs/", "data/"]
+
+[[tool.mypy.overrides]]
+module = ["yfinance.*", "pennylane.*", "qiskit.*", "qiskit_aer.*", "mlflow.*", "networkx.*"]
+ignore_missing_imports = true

@@ -1,0 +1,213 @@
+=== NISQ ablation v3 start ===
+[1/12] profile=ideal (depol=0.0, dephas=0.0) seed=42 M=8
+2026-05-12 15:57:16 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 15:57:16 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_ideal_D' does not exist. Creating a new experiment.
+2026-05-12 15:57:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.6782 sharpe=0.2184 latency=1.26ms duration=11.8s
+[2/12] profile=ideal (depol=0.0, dephas=0.0) seed=123 M=8
+2026-05-12 15:57:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:57:37 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0404 sharpe=-0.0092 latency=1.11ms duration=8.8s
+[3/12] profile=ideal (depol=0.0, dephas=0.0) seed=456 M=8
+2026-05-12 15:57:37 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:57:46 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.3867 sharpe=0.1118 latency=1.01ms duration=9.0s
+[4/12] profile=depol=0.05 (depol=0.05, dephas=0.0) seed=42 M=8
+2026-05-12 15:57:46 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 15:57:46 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_depol=0.05_D' does not exist. Creating a new experiment.
+2026-05-12 16:00:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.5779 sharpe=0.1870 latency=28.61ms duration=185.9s
+[5/12] profile=depol=0.05 (depol=0.05, dephas=0.0) seed=123 M=8
+2026-05-12 16:00:53 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:03:37 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0213 sharpe=0.0053 latency=25.83ms duration=171.1s
+[6/12] profile=depol=0.05 (depol=0.05, dephas=0.0) seed=456 M=8
+2026-05-12 16:03:44 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:06:21 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.2494 sharpe=0.0734 latency=27.12ms duration=164.4s
+[7/12] profile=depol=0.10 (depol=0.1, dephas=0.0) seed=42 M=8
+2026-05-12 16:06:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:06:28 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_depol=0.10_D' does not exist. Creating a new experiment.
+2026-05-12 16:09:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.2958 sharpe=0.0955 latency=29.73ms duration=193.0s
+[8/12] profile=depol=0.10 (depol=0.1, dephas=0.0) seed=123 M=8
+2026-05-12 16:09:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:12:39 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.1471 sharpe=-0.0285 latency=30.94ms duration=184.9s
+[9/12] profile=depol=0.10 (depol=0.1, dephas=0.0) seed=456 M=8
+2026-05-12 16:12:47 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:15:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0127 sharpe=0.0031 latency=31.38ms duration=197.2s
+[10/12] profile=dephas=0.05 (depol=0.0, dephas=0.05) seed=42 M=8
+2026-05-12 16:16:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:16:04 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_nisq_v3_dephas=0.05_D' does not exist. Creating a new experiment.
+2026-05-12 16:17:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.5624 sharpe=0.1782 latency=11.95ms duration=85.3s
+[11/12] profile=dephas=0.05 (depol=0.0, dephas=0.05) seed=123 M=8
+2026-05-12 16:17:30 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:18:52 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.1915 sharpe=-0.0396 latency=12.61ms duration=85.5s
+[12/12] profile=dephas=0.05 (depol=0.0, dephas=0.05) seed=456 M=8
+2026-05-12 16:18:56 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:20:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.3476 sharpe=0.0973 latency=12.56ms duration=87.8s
+
+[OK] 12 runs en C:\Localrepo\quantum_ai\outputs\tables\abl_nisq_v3.csv
+=== NISQ DONE ===
+=== Walk-forward v3 start ===
+[1/24] fold=1 model=C seed=42 train_end=2020 test=2021
+2026-05-12 16:20:31 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 16:20:31 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold1_C' does not exist. Creating a new experiment.
+2026-05-12 16:21:47 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.2270 sharpe=0.0580 cand_hit=0.756 topm_hit=0.224 duration=76.3s
+[2/24] fold=1 model=C seed=123 train_end=2020 test=2021
+2026-05-12 16:21:48 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:23:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.4505 sharpe=0.1213 cand_hit=0.756 topm_hit=0.236 duration=76.0s
+[3/24] fold=1 model=C seed=456 train_end=2020 test=2021
+2026-05-12 16:23:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:24:16 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0596 sharpe=-0.0171 cand_hit=0.640 topm_hit=0.164 duration=72.4s
+[4/24] fold=1 model=D seed=42 train_end=2020 test=2021
+2026-05-12 16:24:17 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:24:17 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold1_D' does not exist. Creating a new experiment.
+2026-05-12 16:26:44 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.1948 sharpe=0.0486 cand_hit=0.648 topm_hit=0.196 duration=147.5s
+[5/24] fold=1 model=D seed=123 train_end=2020 test=2021
+2026-05-12 16:26:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:29:07 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0278 sharpe=0.0076 cand_hit=0.652 topm_hit=0.180 duration=143.5s
+[6/24] fold=1 model=D seed=456 train_end=2020 test=2021
+2026-05-12 16:29:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:31:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0822 sharpe=0.0219 cand_hit=0.680 topm_hit=0.176 duration=138.1s
+[7/24] fold=2 model=C seed=42 train_end=2021 test=2022
+2026-05-12 16:31:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:31:27 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold2_C' does not exist. Creating a new experiment.
+2026-05-12 16:32:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0430 sharpe=-0.0071 cand_hit=0.604 topm_hit=0.188 duration=68.1s
+[8/24] fold=2 model=C seed=123 train_end=2021 test=2022
+2026-05-12 16:32:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:33:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.1995 sharpe=0.0360 cand_hit=0.576 topm_hit=0.188 duration=73.8s
+[9/24] fold=2 model=C seed=456 train_end=2021 test=2022
+2026-05-12 16:33:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:35:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.1452 sharpe=0.0279 cand_hit=0.608 topm_hit=0.272 duration=75.5s
+[10/24] fold=2 model=D seed=42 train_end=2021 test=2022
+2026-05-12 16:35:05 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:35:05 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold2_D' does not exist. Creating a new experiment.
+2026-05-12 16:37:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0854 sharpe=-0.0129 cand_hit=0.520 topm_hit=0.140 duration=143.3s
+[11/24] fold=2 model=D seed=123 train_end=2021 test=2022
+2026-05-12 16:37:28 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:39:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.2301 sharpe=-0.0375 cand_hit=0.528 topm_hit=0.156 duration=141.1s
+[12/24] fold=2 model=D seed=456 train_end=2021 test=2022
+2026-05-12 16:39:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:42:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0207 sharpe=-0.0037 cand_hit=0.488 topm_hit=0.108 duration=138.5s
+[13/24] fold=3 model=C seed=42 train_end=2022 test=2023
+2026-05-12 16:42:08 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:42:08 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold3_C' does not exist. Creating a new experiment.
+2026-05-12 16:43:23 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.2823 sharpe=0.0788 cand_hit=0.728 topm_hit=0.236 duration=74.9s
+[14/24] fold=3 model=C seed=123 train_end=2022 test=2023
+2026-05-12 16:43:24 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:44:38 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.2540 sharpe=-0.0708 cand_hit=0.724 topm_hit=0.160 duration=74.7s
+[15/24] fold=3 model=C seed=456 train_end=2022 test=2023
+2026-05-12 16:44:38 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:45:53 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.1195 sharpe=-0.0384 cand_hit=0.812 topm_hit=0.216 duration=74.8s
+[16/24] fold=3 model=D seed=42 train_end=2022 test=2023
+2026-05-12 16:45:54 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:45:54 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold3_D' does not exist. Creating a new experiment.
+2026-05-12 16:48:14 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.5681 sharpe=0.1431 cand_hit=0.632 topm_hit=0.204 duration=140.7s
+[17/24] fold=3 model=D seed=123 train_end=2022 test=2023
+2026-05-12 16:48:15 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:50:39 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.1383 sharpe=0.0347 cand_hit=0.640 topm_hit=0.236 duration=144.6s
+[18/24] fold=3 model=D seed=456 train_end=2022 test=2023
+2026-05-12 16:50:39 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:52:58 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0835 sharpe=-0.0250 cand_hit=0.712 topm_hit=0.184 duration=139.2s
+[19/24] fold=4 model=C seed=42 train_end=2023 test=2024
+2026-05-12 16:52:59 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:52:59 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold4_C' does not exist. Creating a new experiment.
+2026-05-12 16:54:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.4346 sharpe=0.0982 cand_hit=0.708 topm_hit=0.240 duration=74.1s
+[20/24] fold=4 model=C seed=123 train_end=2023 test=2024
+2026-05-12 16:54:13 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:55:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.5111 sharpe=0.1211 cand_hit=0.728 topm_hit=0.240 duration=55.9s
+[21/24] fold=4 model=C seed=456 train_end=2023 test=2024
+2026-05-12 16:55:09 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 16:56:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0917 sharpe=0.0211 cand_hit=0.692 topm_hit=0.192 duration=55.0s
+[22/24] fold=4 model=D seed=42 train_end=2023 test=2024
+2026-05-12 16:56:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 16:56:05 INFO mlflow.tracking.fluent: Experiment with name 'campaign_walk_fwd_fold4_D' does not exist. Creating a new experiment.
+2026-05-12 16:58:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.2535 sharpe=0.0616 cand_hit=0.728 topm_hit=0.276 duration=150.3s
+[23/24] fold=4 model=D seed=123 train_end=2023 test=2024
+2026-05-12 16:58:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:01:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.7109 sharpe=0.2058 cand_hit=0.712 topm_hit=0.220 duration=145.3s
+[24/24] fold=4 model=D seed=456 train_end=2023 test=2024
+2026-05-12 17:01:00 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:03:16 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.1015 sharpe=0.0226 cand_hit=0.732 topm_hit=0.184 duration=135.9s
+
+[OK] 24 runs en C:\Localrepo\quantum_ai\outputs\tables\walk_forward_v3.csv
+=== WALK-FORWARD DONE ===
+=== Coin ablation v3 start ===
+[1/9] coin=weighted_householder seed=42
+2026-05-12 17:03:25 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 17:03:25 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_coin_weighted_householder_D' does not exist. Creating a new experiment.
+2026-05-12 17:05:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.3859 sharpe=0.1014 cand_hit=0.628 topm_hit=0.180 duration=129.7s
+[2/9] coin=weighted_householder seed=123
+2026-05-12 17:05:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:07:44 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.3287 sharpe=0.0800 cand_hit=0.616 topm_hit=0.168 duration=129.9s
+[3/9] coin=weighted_householder seed=456
+2026-05-12 17:07:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:09:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0250 sharpe=-0.0058 cand_hit=0.520 topm_hit=0.140 duration=126.1s
+[4/9] coin=grover seed=42
+2026-05-12 17:09:51 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 17:09:51 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_coin_grover_D' does not exist. Creating a new experiment.
+2026-05-12 17:11:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.3027 sharpe=0.0828 cand_hit=0.668 topm_hit=0.196 duration=126.3s
+[5/9] coin=grover seed=123
+2026-05-12 17:11:57 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:14:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.2511 sharpe=0.0745 cand_hit=0.640 topm_hit=0.244 duration=126.8s
+[6/9] coin=grover seed=456
+2026-05-12 17:14:04 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:16:10 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0132 sharpe=0.0033 cand_hit=0.516 topm_hit=0.168 duration=126.4s
+[7/9] coin=fourier seed=42
+2026-05-12 17:16:11 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 17:16:11 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_coin_fourier_D' does not exist. Creating a new experiment.
+2026-05-12 17:18:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0296 sharpe=0.0075 cand_hit=0.624 topm_hit=0.148 duration=128.7s
+[8/9] coin=fourier seed=123
+2026-05-12 17:18:20 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:20:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=-0.0561 sharpe=-0.0124 cand_hit=0.592 topm_hit=0.152 duration=126.9s
+[9/9] coin=fourier seed=456
+2026-05-12 17:20:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 17:22:35 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+  return=0.0715 sharpe=0.0158 cand_hit=0.516 topm_hit=0.176 duration=128.1s
+
+[OK] 9 runs en C:\Localrepo\quantum_ai\outputs\tables\abl_coin_v3.csv
+=== COIN DONE ===

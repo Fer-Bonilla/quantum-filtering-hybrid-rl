@@ -1,0 +1,52 @@
+# Universo Nivel 2 (Sec. 8.6.2 del documento de tesis).
+# 30 tickers líquidos del S&P 500 con cobertura sectorial balanceada.
+# Permite subgrafos de tamaño M ≤ 28 para amplificar la ventaja teórica
+# del DTQW (√M ≈ 5.66 con M=32, vs 2.83 con M=8 del Nivel 1).
+
+data:
+  tickers:
+    # Technology (6)
+    - AAPL
+    - MSFT
+    - NVDA
+    - ADBE
+    - CRM
+    - ORCL
+    # Communication Services (3)
+    - GOOGL
+    - META
+    - NFLX
+    # Consumer Discretionary (4)
+    - AMZN
+    - TSLA
+    - HD
+    - NKE
+    # Consumer Staples (3)
+    - KO
+    - PG
+    - WMT
+    # Financials (4)
+    - JPM
+    - V
+    - MA
+    - GS
+    # Healthcare (4)
+    - JNJ
+    - UNH
+    - PFE
+    - LLY
+    # Energy (2)
+    - XOM
+    - CVX
+    # Industrials (2)
+    - BA
+    - CAT
+    # Utilities + Materials (2)
+    - NEE
+    - LIN
+  start_date: 2018-01-02
+  end_date: 2024-12-31
+  source: yahoo
+  interval: 1d
+  cache_subdir: nivel2
+  auto_adjust: true

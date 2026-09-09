@@ -1,0 +1,68 @@
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 15:30:24 INFO mlflow.tracking.fluent: Experiment with name 'campaign_campaign_1_v3_extra_A' does not exist. Creating a new experiment.
+2026/05/12 15:33:35 INFO mlflow.tracking.fluent: Experiment with name 'campaign_campaign_1_v3_extra_B' does not exist. Creating a new experiment.
+[1/20] Run model=A seed=7 steps=50000 ...
+        return=0.8675 sharpe=0.0404 topm_hit=0.201 cand_hit=1.000 latency=0.34ms duration=34.0s
+[2/20] Run model=A seed=99 steps=50000 ...
+        return=0.4161 sharpe=0.0179 topm_hit=0.195 cand_hit=1.000 latency=0.46ms duration=34.6s
+[3/20] Run model=A seed=314 steps=50000 ...
+        return=0.7407 sharpe=0.0303 topm_hit=0.200 cand_hit=0.998 latency=0.48ms duration=40.3s
+[4/20] Run model=A seed=1729 steps=50000 ...
+        return=0.2998 sharpe=0.0142 topm_hit=0.178 cand_hit=1.000 latency=0.49ms duration=40.3s
+[5/20] Run model=A seed=65535 steps=50000 ...
+        return=1.6858 sharpe=0.0726 topm_hit=0.200 cand_hit=1.000 latency=0.46ms duration=40.9s
+[6/20] Run model=B seed=7 steps=50000 ...
+        return=-0.0004 sharpe=-0.0000 topm_hit=0.180 cand_hit=1.000 latency=0.45ms duration=78.0s
+[7/20] Run model=B seed=99 steps=50000 ...
+        return=0.8063 sharpe=0.0324 topm_hit=0.211 cand_hit=1.000 latency=0.46ms duration=77.0s
+[8/20] Run model=B seed=314 steps=50000 ...
+        return=1.1203 sharpe=0.0457 topm_hit=0.194 cand_hit=0.998 latency=0.47ms duration=361.3s
+[9/20] Run model=B seed=1729 steps=50000 ...
+        return=0.2878 sharpe=0.0138 topm_hit=0.210 cand_hit=1.000 latency=0.54ms duration=79.5s
+[10/20] Run model=B seed=65535 steps=50000 ...
+        return=2.1027 sharpe=0.0893 topm_hit=0.215 cand_hit=1.000 latency=0.48ms duration=77.2s
+[11/20] Run model=C seed=7 steps=50000 ...
+2026-05-12 15:44:49 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 15:44:49 INFO mlflow.tracking.fluent: Experiment with name 'campaign_campaign_1_v3_extra_C' does not exist. Creating a new experiment.
+2026-05-12 15:45:45 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=-0.1379 sharpe=-0.0076 topm_hit=0.172 cand_hit=0.421 latency=0.80ms duration=56.6s
+[12/20] Run model=C seed=99 steps=50000 ...
+2026-05-12 15:45:46 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:46:41 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=1.0634 sharpe=0.0615 topm_hit=0.175 cand_hit=0.434 latency=0.72ms duration=55.4s
+[13/20] Run model=C seed=314 steps=50000 ...
+2026-05-12 15:46:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:47:33 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=1.2978 sharpe=0.0694 topm_hit=0.180 cand_hit=0.433 latency=0.75ms duration=51.9s
+[14/20] Run model=C seed=1729 steps=50000 ...
+2026-05-12 15:47:34 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:48:25 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.1581 sharpe=0.0086 topm_hit=0.148 cand_hit=0.417 latency=0.75ms duration=52.3s
+[15/20] Run model=C seed=65535 steps=50000 ...
+2026-05-12 15:48:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:49:17 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=1.0737 sharpe=0.0626 topm_hit=0.187 cand_hit=0.429 latency=0.74ms duration=52.1s
+[16/20] Run model=D seed=7 steps=50000 ...
+2026-05-12 15:49:19 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026/05/12 15:49:19 INFO mlflow.tracking.fluent: Experiment with name 'campaign_campaign_1_v3_extra_D' does not exist. Creating a new experiment.
+2026-05-12 15:50:26 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.9958 sharpe=0.0554 topm_hit=0.183 cand_hit=0.438 latency=1.00ms duration=68.6s
+[17/20] Run model=D seed=99 steps=50000 ...
+2026-05-12 15:50:27 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:51:40 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=1.4581 sharpe=0.0752 topm_hit=0.198 cand_hit=0.454 latency=1.40ms duration=74.5s
+[18/20] Run model=D seed=314 steps=50000 ...
+2026-05-12 15:51:42 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:53:14 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.8043 sharpe=0.0381 topm_hit=0.180 cand_hit=0.452 latency=1.52ms duration=93.9s
+[19/20] Run model=D seed=1729 steps=50000 ...
+2026-05-12 15:53:16 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:54:50 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.6457 sharpe=0.0339 topm_hit=0.176 cand_hit=0.433 latency=1.50ms duration=95.9s
+[20/20] Run model=D seed=65535 steps=50000 ...
+2026-05-12 15:54:53 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+2026-05-12 15:56:23 [WARNING] src.data.sector_map: Sectores desconocidos para 2 ticker(s); usando 'UNK': NFLX, ORCL
+        return=0.7373 sharpe=0.0370 topm_hit=0.175 cand_hit=0.447 latency=1.44ms duration=92.1s
+
+[OK] 20 runs escritos en C:\Localrepo\quantum_ai\outputs\tables\campaign_1_v3_extra.csv

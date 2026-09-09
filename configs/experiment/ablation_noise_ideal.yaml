@@ -1,0 +1,26 @@
+# Ablación 5 (Sec. 8.20.5): Modelo D simulador ideal (sin ruido).
+
+defaults:
+  - ../data/nivel1
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/default
+  - ../quantum/default
+
+agent:
+  model: D
+
+quantum:
+  backend: matrix
+  noise:
+    enabled: false
+    depolarizing_prob: 0.0
+    dephasing_prob: 0.0
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: ablation_noise_ideal
+
+seeds: [42, 123, 456, 789, 1024]

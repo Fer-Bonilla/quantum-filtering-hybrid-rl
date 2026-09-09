@@ -1,0 +1,63 @@
+data:
+  tickers:
+  - AAPL
+  - MSFT
+  - JPM
+  - JNJ
+  - XOM
+  - KO
+  start_date: '2023-01-03'
+  end_date: '2024-06-30'
+  source: yahoo
+  interval: 1d
+  cache_subdir: smoke_train
+  auto_adjust: true
+env:
+  feature:
+    window_length: 10
+    volatility_window: 10
+    volume_window: 10
+    return_type: log
+    indicators: []
+  split:
+    train_frac: 0.6
+    val_frac: 0.2
+  lambda_risk: 0.1
+  mu_cost: 0.001
+  transaction_cost: 0.0005
+  max_steps: 50
+  episode_sampling: random
+agent:
+  ppo:
+    learning_rate: 0.0003
+    n_epochs: 2
+    batch_size: 32
+    rollout_steps: 128
+    clip_coef: 0.2
+    gamma: 0.99
+    gae_lambda: 0.95
+    entropy_coef: 0.01
+    value_coef: 0.5
+    max_grad_norm: 0.5
+    hidden_sizes:
+    - 64
+    - 64
+  model: B
+graph:
+  alpha: 1.0
+  beta: 0.0
+  eps: 1.0e-08
+  lookback_window: 30
+  k_neighbors: 2
+  sym_mode: avg
+  subgraph_max_size: 4
+  seed_score_window: 10
+  update_frequency: 1
+training:
+  total_steps: 256
+  eval_every: 128
+  snapshot_every: 256
+  mlflow_experiment_name: smoke_B
+  mlflow_tracking_uri: null
+seeds:
+- 42

@@ -1,0 +1,13 @@
+# Configuración del módulo cuántico DTQW (Sec. 6.10 / 7.10-7.17).
+
+quantum:
+  k_steps: 3                    # k ∈ {2, 3, 4, 5, 6} recomendado
+  m_top: 3                      # |C_t| = m
+  backend: matrix               # matrix (rápido) | pennylane (ruido / NISQ)
+  shots: null                   # solo aplica si backend=pennylane
+  init_mode: uniform            # uniform | seed_centered
+  renormalize_threshold: 1.0e-9
+  noise:
+    enabled: false
+    depolarizing_prob: 0.0
+    dephasing_prob: 0.0

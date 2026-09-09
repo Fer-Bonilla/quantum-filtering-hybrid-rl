@@ -1,0 +1,60 @@
+[1/24] reward=risk_penalty lambda=0.000 seed=42
+C:\Localrepo\quantum_ai\.venv\Lib\site-packages\mlflow\tracking\_tracking_service\utils.py:184: FutureWarning: The filesystem tracking backend (e.g., './mlruns') is deprecated as of February 2026. Consider transitioning to a database backend (e.g., 'sqlite:///mlflow.db') to take advantage of the latest MLflow features. See https://mlflow.org/docs/latest/self-hosting/migrate-from-file-store for migration guidance.
+  return FileStore(store_uri, store_uri)
+2026/05/12 13:15:36 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_risk_penalty_0.000_A' does not exist. Creating a new experiment.
+  return=0.3019 sharpe=0.0732 duration=4.6s
+[2/24] reward=risk_penalty lambda=0.000 seed=123
+  return=0.4052 sharpe=0.0985 duration=2.6s
+[3/24] reward=risk_penalty lambda=0.000 seed=456
+  return=-0.3942 sharpe=-0.0824 duration=2.6s
+[4/24] reward=risk_penalty lambda=0.010 seed=42
+2026/05/12 13:15:47 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_risk_penalty_0.010_A' does not exist. Creating a new experiment.
+  return=-0.3004 sharpe=-0.0734 duration=2.4s
+[5/24] reward=risk_penalty lambda=0.010 seed=123
+  return=-0.1800 sharpe=-0.0446 duration=2.3s
+[6/24] reward=risk_penalty lambda=0.010 seed=456
+  return=-1.0941 sharpe=-0.2281 duration=2.5s
+[7/24] reward=risk_penalty lambda=0.050 seed=42
+2026/05/12 13:15:54 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_risk_penalty_0.050_A' does not exist. Creating a new experiment.
+  return=-2.4563 sharpe=-0.6022 duration=2.5s
+[8/24] reward=risk_penalty lambda=0.050 seed=123
+  return=-2.6103 sharpe=-0.6094 duration=2.8s
+[9/24] reward=risk_penalty lambda=0.050 seed=456
+  return=-3.6574 sharpe=-0.7539 duration=2.6s
+[10/24] reward=risk_penalty lambda=0.100 seed=42
+2026/05/12 13:16:03 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_risk_penalty_0.100_A' does not exist. Creating a new experiment.
+  return=-5.3438 sharpe=-1.1257 duration=3.0s
+[11/24] reward=risk_penalty lambda=0.100 seed=123
+  return=-5.7182 sharpe=-1.1539 duration=2.7s
+[12/24] reward=risk_penalty lambda=0.100 seed=456
+  return=-6.7982 sharpe=-1.3174 duration=2.6s
+[13/24] reward=log_wealth lambda=0.000 seed=42
+2026/05/12 13:16:11 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_log_wealth_0.000_A' does not exist. Creating a new experiment.
+  return=0.2581 sharpe=0.0627 duration=2.6s
+[14/24] reward=log_wealth lambda=0.000 seed=123
+  return=0.3788 sharpe=0.0916 duration=2.8s
+[15/24] reward=log_wealth lambda=0.000 seed=456
+  return=-0.4366 sharpe=-0.0900 duration=2.8s
+[16/24] reward=log_wealth lambda=0.010 seed=42
+2026/05/12 13:16:20 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_log_wealth_0.010_A' does not exist. Creating a new experiment.
+  return=-0.3126 sharpe=-0.0767 duration=3.0s
+[17/24] reward=log_wealth lambda=0.010 seed=123
+  return=-0.2444 sharpe=-0.0588 duration=2.6s
+[18/24] reward=log_wealth lambda=0.010 seed=456
+  return=-1.1297 sharpe=-0.2398 duration=2.9s
+[19/24] reward=log_wealth lambda=0.050 seed=42
+2026/05/12 13:16:29 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_log_wealth_0.050_A' does not exist. Creating a new experiment.
+  return=-2.5567 sharpe=-0.6213 duration=2.8s
+[20/24] reward=log_wealth lambda=0.050 seed=123
+  return=-2.6219 sharpe=-0.6081 duration=2.7s
+[21/24] reward=log_wealth lambda=0.050 seed=456
+  return=-3.7265 sharpe=-0.7650 duration=2.8s
+[22/24] reward=log_wealth lambda=0.100 seed=42
+2026/05/12 13:16:38 INFO mlflow.tracking.fluent: Experiment with name 'campaign_abl_lambda_log_wealth_0.100_A' does not exist. Creating a new experiment.
+  return=-5.3214 sharpe=-1.1399 duration=3.0s
+[23/24] reward=log_wealth lambda=0.100 seed=123
+  return=-5.7857 sharpe=-1.1634 duration=2.8s
+[24/24] reward=log_wealth lambda=0.100 seed=456
+  return=-6.8509 sharpe=-1.3212 duration=3.0s
+
+[OK] 24 runs en outputs\tables\abl_lambda_mini.csv

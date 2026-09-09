@@ -1,0 +1,36 @@
+# Universo Nivel 1 (Sec. 8.6.1 del documento de tesis).
+# 15 activos líquidos del S&P 500 con cobertura sectorial mínima.
+
+data:
+  tickers:
+    # Technology (3)
+    - AAPL
+    - MSFT
+    - NVDA
+    # Communications (1)
+    - GOOGL
+    # Consumer Discretionary (2)
+    - AMZN
+    - TSLA
+    # Consumer Staples (1)
+    - KO
+    # Financials (2)
+    - JPM
+    - V
+    # Healthcare (2)
+    - JNJ
+    - UNH
+    # Energy (1)
+    - XOM
+    # Industrials (1)
+    - CAT
+    # Utilities (1)
+    - NEE
+    # Materials (1)
+    - LIN
+  start_date: 2018-01-02
+  end_date: 2024-12-31
+  source: yahoo
+  interval: 1d
+  cache_subdir: nivel1
+  auto_adjust: true

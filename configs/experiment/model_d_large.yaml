@@ -1,0 +1,21 @@
+# Modelo D con configuración escalada (Nivel 2, M=16, k=5, β=0.5).
+# Variante para probar si la DTQW gana significancia al subir M y activar
+# estructura sectorial.
+
+defaults:
+  - ../data/nivel2
+  - ../env/default
+  - ../agent/ppo
+  - ../graph/large
+  - ../quantum/large
+
+agent:
+  model: D
+
+training:
+  total_steps: 50000
+  eval_every: 2000
+  snapshot_every: 10000
+  mlflow_experiment_name: model_d_large
+
+seeds: [42, 123, 456, 789, 1024]
