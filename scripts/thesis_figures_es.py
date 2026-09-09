@@ -266,7 +266,7 @@ def fig_regimenes() -> None:
     ax.set_xticks(x)
     ax.set_xticklabels([f"{anios[f]}\n(pliegue {f})" for f in folds])
     ax.set_ylabel("Sharpe (por paso, media n=5)")
-    ax.set_title("Validación walk-forward 2021-2024: R ≈ D en los cuatro regímenes")
+    ax.set_title("Sharpe por régimen de mercado (walk-forward 2021-2024, n=5 por pliegue)")
     ax.legend(loc="lower left", fontsize=8.5, ncol=5)
     ax.grid(axis="y", alpha=0.3)
     ax.yaxis.set_major_formatter(coma)
@@ -327,13 +327,15 @@ def fig_decision() -> None:
 
     criterios = [
         ("1. candidate_hit (métrica primaria)",
-         "D − C = +0,019 (p<0,001) → D gana el plan original\nR − D = +0,009 (n.c.): el control de azar no se separa"),
-        ("2. Sharpe fuera de muestra",
-         "TOST: R ≡ D (Δ ±0,020; p=0,031) → empate formal"),
+         "D − C = +0,019 (p<0,001; campaña principal, n=10) → D gana el plan original\n"
+         "R − D: TOST ±0,019, réplica v8 en 30 semillas nuevas, p=4·10⁻⁴ → equivalentes"),
+        ("2. Sharpe",
+         "TOST ±0,020, réplica v8 (n=30): R ≡ D, p=1,4·10⁻³ → empate formal"),
         ("3. Latencia por paso",
-         "R evita la simulación DTQW → menor latencia"),
+         "R evita la simulación DTQW → menor latencia (0,75 vs 1,29 ms)"),
         ("4. Coste en hardware real",
-         "DTQW: ≈21k–832k USD por campaña (Anexo D)\nR: cómputo clásico ordinario"),
+         "DTQW: ≈42k–1.664k USD por campaña de 500.000 evaluaciones (Anexo D)\n"
+         "R: cómputo clásico ordinario"),
     ]
     y = 8.6
     for titulo, cuerpo in criterios:
@@ -456,6 +458,128 @@ def fig_walkforward() -> None:
     _save(fig, "fig_walkforward_esquema.pdf")
 
 
+# ---------------------------------------------------------------------------
+# 10. Arquitectura hibrida (conceptual; sustituye a diagrama_esquematico.jpg)
+# ---------------------------------------------------------------------------
+
+def fig_arquitectura_esquematica() -> None:
+    """Flujo de decision: seleccion discreta de UN activo; el filtro local
+    devuelve m_t candidatos sobre un subgrafo de tamano M_t <= M."""
+    fig, ax = plt.subplots(figsize=(9.2, 4.6))
+    ax.set_xlim(0, 12)
+    ax.set_ylim(0, 8)
+    ax.axis("off")
+    az, ve, na, gr = "#e8eef7", "#e9f5e9", "#fff1e0", "#f2f2f2"
+
+    # fila superior: datos -> estado -> politica -> accion -> recompensa
+    _caja(ax, 0.2, 5.6, 2.3, 1.5, "Datos OHLCV\nrasgos sin fuga temporal\n(desplazamiento 1)", gr, 8.0)
+    _caja(ax, 2.9, 5.6, 2.3, 1.5, "Entorno MarketEnv\nestado $s_t$ (ventana\nde rasgos por activo)", az, 8.0)
+    _caja(ax, 5.6, 5.6, 2.9, 1.5,
+          "Política PPO $\\pi_c(u\\mid s_t)$\nenmascarada sobre $q_t$\n(renormalización)", az, 8.0)
+    _caja(ax, 8.9, 5.6, 2.9, 1.5,
+          "Acción discreta: UN activo\n$u_t\\in\\{1,\\dots,N\\}$\nrecompensa $r_t$ = log-riqueza − coste", na, 8.0)
+    for x0, x1 in [(2.5, 2.9), (5.2, 5.6), (8.5, 8.9)]:
+        ax.add_patch(FancyArrowPatch((x0, 6.35), (x1, 6.35), arrowstyle="-|>",
+                                     mutation_scale=13, color="#444444"))
+
+    # fila inferior: grafo -> subgrafo -> modulo local -> candidatos
+    _caja(ax, 0.2, 1.6, 2.3, 1.7,
+          "Grafo dinámico $G_t$\nafinidad $k$-NN simetrizada\n$N$ activos", ve, 8.0)
+    _caja(ax, 2.9, 1.6, 2.3, 1.7,
+          "Subgrafo $H_t$\nBFS desde la semilla\n$M_t=|V(H_t)|\\leq M$", ve, 8.0)
+    _caja(ax, 5.6, 1.6, 2.9, 1.7,
+          "Módulo local (interfaz única)\nC: caminata clásica $D^{-1}W$\nD: DTQW  ·  controles R, Q, S(p)",
+          ve, 8.0, ec=COL["D"])
+    _caja(ax, 8.9, 1.6, 2.9, 1.7,
+          "Conjunto candidato $q_t$\n$|q_t| = m_t=\\min(m, M_t)$\n(máscara sobre las acciones)", na, 8.0)
+    for x0, x1 in [(2.5, 2.9), (5.2, 5.6), (8.5, 8.9)]:
+        ax.add_patch(FancyArrowPatch((x0, 2.45), (x1, 2.45), arrowstyle="-|>",
+                                     mutation_scale=13, color="#444444"))
+    # acoplamientos verticales
+    ax.add_patch(FancyArrowPatch((1.35, 5.6), (1.35, 3.3), arrowstyle="-|>",
+                                 mutation_scale=13, color="#444444"))
+    ax.text(1.5, 4.45, "retornos\nrecientes", fontsize=7.6, va="center")
+    ax.add_patch(FancyArrowPatch((10.35, 3.3), (7.6, 5.6), arrowstyle="-|>",
+                                 mutation_scale=13, color=COL["D"]))
+    ax.text(9.1, 4.35, "máscara top-$m_t$\n(sin gradientes)", fontsize=7.6,
+            color=COL["D"], ha="center")
+    ax.add_patch(FancyArrowPatch((10.35, 7.1), (10.35, 7.6), arrowstyle="-",
+                                 color="#444444"))
+    ax.text(6.0, 7.55, "El módulo local no decide ni recibe gradientes: solo restringe "
+            "el soporte de la política; la acción final es siempre de un único activo.",
+            fontsize=7.8, ha="center", va="center", style="italic")
+    ax.set_title("Arquitectura híbrida: selección discreta de un activo con filtrado local "
+                 "sobre subgrafos dinámicos")
+    _save(fig, "fig_arquitectura_esquematica.pdf")
+
+
+# ---------------------------------------------------------------------------
+# 11. Caminata cuantica de tiempo discreto (conceptual; sustituye al JPG)
+# ---------------------------------------------------------------------------
+
+def fig_caminata_cuantica() -> None:
+    """Un paso DTQW: (a) moneda homogenea U = S (I_p x C); (b) moneda local
+    bloque-diagonal controlada por posicion, U = S C_coin (grafos irregulares)."""
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(9.6, 4.3),
+                                   gridspec_kw={"width_ratios": [1, 1.15]})
+    for ax in (ax1, ax2):
+        ax.set_xlim(0, 10)
+        ax.set_ylim(0, 10)
+        ax.axis("off")
+    az, ve, na, gr = "#e8eef7", "#e9f5e9", "#fff1e0", "#f2f2f2"
+
+    # (a) moneda homogenea
+    ax1.set_title("(a) Moneda homogénea (grafo regular)", fontsize=10)
+    _caja(ax1, 0.3, 7.4, 4.3, 1.7, "Posición $\\mathcal{H}_p$\n$\\{|v\\rangle\\}_{v\\in V}$", az, 8.4)
+    _caja(ax1, 5.4, 7.4, 4.3, 1.7, "Moneda $\\mathcal{H}_c$\n$\\{|c\\rangle\\}$, dim $d$", na, 8.4)
+    ax1.text(5.0, 8.25, "$\\otimes$", fontsize=14, ha="center", va="center")
+    _caja(ax1, 0.3, 4.5, 9.4, 1.7,
+          "1) Moneda   $\\hat I_p\\otimes\\hat C$\n(actúa solo sobre $\\mathcal{H}_c$; la posición no cambia)",
+          gr, 8.2)
+    _caja(ax1, 0.3, 2.2, 9.4, 1.7,
+          "2) Desplazamiento   $\\hat S\\,|v,c\\rangle = |u_c(v),\\,c'\\rangle$\n(salta al vecino que indica la moneda)",
+          gr, 8.2)
+    for y0, y1 in [(7.4, 6.2), (4.5, 3.9)]:
+        ax1.add_patch(FancyArrowPatch((5.0, y0), (5.0, y1), arrowstyle="-|>",
+                                      mutation_scale=13, color="#444444"))
+    ax1.text(5.0, 1.0, "$\\hat U = \\hat S\\,(\\hat I_p\\otimes\\hat C)$,   "
+             "$|\\psi_k\\rangle = \\hat U^{\\,k}|\\psi_0\\rangle$",
+             fontsize=11, ha="center", va="center")
+
+    # (b) moneda local bloque-diagonal
+    ax2.set_title("(b) Moneda local por nodo (grafo irregular, esta memoria)", fontsize=10)
+    _caja(ax2, 0.3, 7.4, 9.4, 1.6,
+          "Espacio por puertos: $|v_i, c\\rangle$, $c=0,\\dots,d_i-1$ "
+          "(dim $M_t d_{\\max}$; relleno fijo)", az, 8.2)
+    # bloque diagonal
+    bx, by, bw = 0.6, 3.2, 4.0
+    ax2.add_patch(FancyBboxPatch((bx, by), bw, bw, boxstyle="square,pad=0",
+                                 fc="white", ec="#555555", linewidth=0.9))
+    sizes = [1.3, 0.9, 1.1, 0.7]
+    off = 0.0
+    for i, s in enumerate(sizes):
+        x0 = bx + off
+        y0 = by + bw - off - s
+        ax2.add_patch(FancyBboxPatch((x0, y0), s, s, boxstyle="square,pad=0",
+                                     fc="#fdd9b5", ec=COL["D"], linewidth=0.9))
+        ax2.text(x0 + s / 2, y0 + s / 2, f"$\\hat C_{{{i+1}}}$",
+                 fontsize=8.5, ha="center", va="center")
+        off += s
+    ax2.text(bx + bw / 2, by - 0.5, "$\\hat C^{\\mathrm{coin}} = \\hat C_1\\oplus\\hat C_2\\oplus\\cdots\\oplus\\hat C_{M_t}$",
+             fontsize=9.5, ha="center")
+    ax2.text(bx + bw / 2, by - 1.05, "bloque-diagonal, controlada\npor la posición ($d_i$ = grado)",
+             fontsize=7.8, ha="center", va="center")
+    _caja(ax2, 5.1, 5.2, 4.6, 2.0,
+          "$\\hat C_i = 2|w_i\\rangle\\langle w_i| - I_{d_i}$\n"
+          "$|w_i\\rangle\\propto\\sum_j \\sqrt{W(i,j)}\\,|c_{i\\to j}\\rangle$\n"
+          "(reflexión de Grover ponderada)", na, 8.0)
+    _caja(ax2, 5.1, 3.2, 4.6, 1.6,
+          "$\\hat S\\,|v_i, c_{i\\to j}\\rangle = |v_j, c_{j\\to i}\\rangle$\n(permutación de puertos recíprocos)", gr, 8.0)
+    ax2.text(5.0, 1.0, "$\\hat U_t = \\hat S_t\\,\\hat C^{\\mathrm{coin}}_t$   "
+             "(no es un producto tensorial simple)", fontsize=10.5, ha="center", va="center")
+    _save(fig, "fig_caminata_cuantica.pdf")
+
+
 if __name__ == "__main__":
     fig_campaign_panels()
     fig_forest()
@@ -466,4 +590,6 @@ if __name__ == "__main__":
     fig_decision()
     fig_config_experimentos()
     fig_walkforward()
-    print("\n[OK] 9 figuras PDF generadas.")
+    fig_arquitectura_esquematica()
+    fig_caminata_cuantica()
+    print("\n[OK] 11 figuras PDF generadas.")
