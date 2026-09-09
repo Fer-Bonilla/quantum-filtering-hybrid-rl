@@ -41,6 +41,7 @@ ABLACIONES = [("sweet_abl_k", "pasos de caminata $k$"),
               ("sweet_abl_init", "estado inicial de la caminata")]
 
 plt.rcParams.update({"font.size": 9.5, "font.family": "serif",
+                     "mathtext.fontset": "dejavuserif",
                      "figure.constrained_layout.use": True})
 coma = FuncFormatter(lambda v, _: f"{v:.2f}".replace(".", ","))
 
