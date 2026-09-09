@@ -499,15 +499,11 @@ def fig_arquitectura_esquematica() -> None:
     ax.add_patch(FancyArrowPatch((1.35, 5.6), (1.35, 3.3), arrowstyle="-|>",
                                  mutation_scale=13, color="#444444"))
     ax.text(1.5, 4.45, "retornos\nrecientes", fontsize=7.6, va="center")
+    # flecha de la mascara: de candidatos (abajo-dcha) a la politica (arriba)
     ax.add_patch(FancyArrowPatch((10.35, 3.3), (7.6, 5.6), arrowstyle="-|>",
                                  mutation_scale=13, color=COL["D"]))
-    ax.text(9.1, 4.35, "máscara top-$m_t$\n(sin gradientes)", fontsize=7.6,
-            color=COL["D"], ha="center")
-    ax.add_patch(FancyArrowPatch((10.35, 7.1), (10.35, 7.6), arrowstyle="-",
-                                 color="#444444"))
-    ax.text(6.0, 7.55, "El módulo local no decide ni recibe gradientes: solo restringe "
-            "el soporte de la política; la acción final es siempre de un único activo.",
-            fontsize=7.8, ha="center", va="center", style="italic")
+    ax.text(9.9, 4.15, "máscara top-$m_t$\n(sin gradientes)", fontsize=7.6,
+            color=COL["D"], ha="left", va="center")
     ax.set_title("Arquitectura híbrida: selección discreta de un activo con filtrado local "
                  "sobre subgrafos dinámicos")
     _save(fig, "fig_arquitectura_esquematica.pdf")
