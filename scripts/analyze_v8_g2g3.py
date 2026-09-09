@@ -22,7 +22,7 @@ import csv
 from collections import defaultdict
 
 import numpy as np
-
+from src.utils.paired_stats import paired_bootstrap
 from src.utils.paths import TABLES_DIR
 
 B_BOOT = 5000
@@ -37,16 +37,13 @@ def _load(name: str) -> list[dict]:
 
 
 def _boot_p(d: np.ndarray, one_sided: bool = True, seed: int = 20260705):
-    rng = np.random.default_rng(seed)
-    boots = np.array([rng.choice(d, len(d), replace=True).mean()
-                      for _ in range(B_BOOT)])
-    p_pos = float((boots <= 0).mean())
-    p_two = float(2 * min((boots <= 0).mean(), (boots >= 0).mean()))
+    # Especificacion unica (src/utils/paired_stats.py): p2 acotado a 1,
+    # empates inclusivos, caso degenerado sin p.
+    bs = paired_bootstrap(d, n_boot=B_BOOT, seed=seed)
     return {
-        "diff": float(d.mean()), "n": len(d),
-        "ci_lo": float(np.percentile(boots, 2.5)),
-        "ci_hi": float(np.percentile(boots, 97.5)),
-        "p": p_pos if one_sided else p_two,
+        "diff": bs.mean, "n": bs.n,
+        "ci_lo": bs.ci_lo, "ci_hi": bs.ci_hi,
+        "p": bs.p_greater if one_sided else bs.p_two,
     }
 
 
@@ -130,7 +127,6 @@ def dispersion_exponent() -> None:
     from src.data.cleaning import CleaningPolicy, clean
     from src.data.download import load_ohlcv
     from src.data.features import FeatureSpec, compute_features
-    from src.data.splits import SplitSpec, chronological_split
     from src.graph.graph_builder import GraphSpec, build_graph
     from src.graph.regular_subgraphs import TopologyWrapper
     from src.graph.subgraph_selector import seed_score, select_subgraph
@@ -198,6 +194,7 @@ def dispersion_exponent() -> None:
 
     print(f"{'topologia':<14}{'exponente (pendiente log-log)':>32}")
     import csv as _csv
+
     from src.utils.paths import TABLES_DIR as _TD
     out_csv = _TD / "dispersion_rms_v8.csv"
     with out_csv.open("w", newline="", encoding="utf-8") as fh:
@@ -213,7 +210,7 @@ def dispersion_exponent() -> None:
                 continue
             pendiente = np.polyfit(np.log(ks[valid]),
                                    np.log(media[valid]), 1)[0]
-            for k, m, s in zip(ks, media, sd):
+            for k, m, s in zip(ks, media, sd, strict=True):
                 w.writerow([nombre, int(k), f"{m:.6f}", f"{s:.6f}",
                             arr.shape[0], f"{pendiente:.4f}"])
             print(f"{nombre:<14}{pendiente:>18.3f}   (RMS medio k=1..6: "

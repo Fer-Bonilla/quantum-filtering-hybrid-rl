@@ -22,11 +22,8 @@ Uso::
 from __future__ import annotations
 
 import csv
-from collections import defaultdict
-from pathlib import Path
 
 import numpy as np
-
 from src.agents.hybrid_agent import (
     HybridAgent,
     HybridSpec,
@@ -51,6 +48,7 @@ from src.quantum.random_walker import RandomWalker
 from src.quantum.sticky_walker import StickyWalker
 from src.training.evaluate import PromisingSpec, compute_promising_matrix
 from src.utils.config import load_config
+from src.utils.paired_stats import paired_bootstrap
 from src.utils.paths import CONFIGS_DIR, TABLES_DIR
 
 SEEDS = [42, 123, 456, 789, 1024, 7, 99, 314, 1729, 65535]
@@ -232,17 +230,14 @@ def _paired_boot(rows, a: str, b: str, metric: str, one_sided: bool = True):
     common = sorted(set(da) & set(db))
     d = np.array([da[s] - db[s] for s in common], dtype=float)
     d = d[np.isfinite(d)]
-    rng = np.random.default_rng(20260705)
-    boots = np.array([rng.choice(d, size=len(d), replace=True).mean()
-                      for _ in range(B_BOOT)])
-    p_pos = float((boots <= 0).mean())          # H1: a > b (unilateral)
-    p_two = float(2 * min((boots <= 0).mean(), (boots >= 0).mean()))
+    # Especificacion unica (src/utils/paired_stats.py)
+    bs = paired_bootstrap(d, n_boot=B_BOOT, seed=20260705)
+    p = bs.p_greater if one_sided else bs.p_two   # H1: a > b (unilateral)
     return {
-        "diff": float(d.mean()), "n": len(d),
-        "ci_lo": float(np.percentile(boots, 2.5)),
-        "ci_hi": float(np.percentile(boots, 97.5)),
-        "p": p_pos if one_sided else p_two,
-        "p_bonf6": min(1.0, (p_pos if one_sided else p_two) * K_BONF),
+        "diff": bs.mean, "n": bs.n,
+        "ci_lo": bs.ci_lo, "ci_hi": bs.ci_hi,
+        "p": p,
+        "p_bonf6": min(1.0, p * K_BONF) if np.isfinite(p) else float("nan"),
     }
 
 

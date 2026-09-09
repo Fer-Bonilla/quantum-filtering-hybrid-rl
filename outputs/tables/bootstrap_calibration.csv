@@ -1,0 +1,7 @@
+n,prueba,alpha,tasa_rechazo_H0,replicas,B,rng_seed
+10,bootstrap_percentil,0.05,0.102,2000,2000,20260909
+10,t_pareada,0.05,0.052,2000,2000,20260909
+10,wilcoxon,0.05,0.0525,2000,2000,20260909
+40,bootstrap_percentil,0.05,0.0605,2000,2000,20260909
+40,t_pareada,0.05,0.0505,2000,2000,20260909
+40,wilcoxon,0.05,0.05,2000,2000,20260909

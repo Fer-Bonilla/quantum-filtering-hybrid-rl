@@ -9,11 +9,18 @@ numpy 2.4.4, scipy 1.17.1, pandas 2.3.3, torch 2.11.0 (CPU), pennylane
 0.44.1, uv 0.11.8, Windows 11 x86-64. `uv sync` instala exactamente estas
 versiones desde `uv.lock`.
 
-Convenciones estadísticas comunes: bootstrap pareado por semilla con
-B = 5 000 remuestreos, IC de percentiles 2,5/97,5, p₂ = 2·min(P(>0), P(<0)),
+Convenciones estadísticas comunes (implementadas en una única función,
+`src/utils/paired_stats.py`, usada por todos los scripts de contraste
+pareado): bootstrap pareado por semilla con B = 5 000 remuestreos, IC de
+percentiles 2,5/97,5, p₂ = min{1, 2·min(P(m̄\*≤0), P(m̄\*≥0))} con empates
+inclusivos y caso degenerado (todas las diferencias iguales) sin valor p;
 `numpy.random.default_rng(2026)` en la campaña principal y
 `default_rng(20260705)` en v7/v8; TOST de Schuirmann con t de Student e IC90;
-corrección Bonferroni sobre la familia declarada en cada campaña.
+corrección Bonferroni sobre la familia declarada en cada campaña. El p₂
+bootstrap es anticonservador con n = 10 (rechazo bajo H₀ al 5 %: 0,102;
+0,060 con n = 40); todos los contrastes del cuerpo se cruzan con t pareada y
+Wilcoxon calibradas en `outputs/tables/paired_crosscheck.csv`
+(`scripts/bootstrap_calibration_review.py`, `outputs/tables/bootstrap_calibration.csv`).
 
 ---
 

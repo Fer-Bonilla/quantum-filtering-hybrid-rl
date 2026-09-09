@@ -14,10 +14,10 @@ por defecto M=8, mismas 10 semillas, mismos 50k steps). Bonferroni k=11.
 from __future__ import annotations
 
 import csv
-from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
+from src.utils.paired_stats import paired_bootstrap
 
 BASE = Path("outputs/tables")
 METRICS = (
@@ -53,13 +53,11 @@ def paired(label: str, lhs: dict, rhs: dict, out_rows: list[dict]) -> None:
         diffs = diffs[np.isfinite(diffs)]
         if diffs.size < 2:
             continue
-        boot = np.array([
-            rng.choice(diffs, diffs.size, replace=True).mean() for _ in range(5000)
-        ])
-        ci_lo, ci_hi = np.percentile(boot, [2.5, 97.5])
-        p_pos = float((boot > 0).mean())
-        p_two = 2.0 * min(p_pos, 1.0 - p_pos)
-        p_bonf = min(p_two * 11, 1.0)
+        bs = paired_bootstrap(diffs, n_boot=5000, rng=rng)
+        ci_lo, ci_hi = bs.ci_lo, bs.ci_hi
+        p_pos = bs.p_positive
+        p_two = bs.p_two          # nan si degenerado (identico por construccion)
+        p_bonf = min(p_two * 11, 1.0) if np.isfinite(p_two) else float("nan")
         out_rows.append({
             "comparison": label, "metric": m,
             "mean_diff": float(diffs.mean()),

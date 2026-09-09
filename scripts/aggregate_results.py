@@ -18,6 +18,7 @@ from pathlib import Path
 
 import numpy as np
 from src.utils.logging import get_logger, setup_logging
+from src.utils.paired_stats import paired_bootstrap
 from src.utils.paths import TABLES_DIR, ensure_dir
 
 _log = get_logger(__name__)
@@ -128,23 +129,28 @@ def _paired_bootstrap_c_vs_d(
                 "p_better": float("nan"),
             }
             continue
-        boot = np.array(
-            [rng.choice(diffs_arr, size=diffs_arr.size, replace=True).mean() for _ in range(n_boot)]
-        )
-        p_better = float(np.mean(boot > 0.0))
-        # P-value bilateral derivado del bootstrap (rev. v2 — Problema 1.2).
-        # Min(P(D>C), P(D<C)) * 2: probabilidad de observar |mean_diff| >= valor.
-        p_two_sided = min(p_better, 1.0 - p_better) * 2.0
+        if diffs_arr.size < 2:
+            out[metric] = {
+                "mean_diff": float(diffs_arr.mean()),
+                "ci_lo": float("nan"), "ci_hi": float("nan"),
+                "n_pairs": float(diffs_arr.size),
+                "p_better": float("nan"), "p_two_sided": float("nan"),
+            }
+            continue
+        # Especificacion unica del proyecto (Anexo B): IC percentil 2,5/97,5;
+        # p2 = min(1, 2*min(P(m<=0), P(m>=0))); caso degenerado => sin p.
+        bs = paired_bootstrap(diffs_arr, n_boot=n_boot, rng=rng)
         out[metric] = {
-            "mean_diff": float(diffs_arr.mean()),
-            "ci_lo": float(np.percentile(boot, 2.5)),
-            "ci_hi": float(np.percentile(boot, 97.5)),
-            "n_pairs": float(diffs_arr.size),
+            "mean_diff": bs.mean,
+            "ci_lo": bs.ci_lo,
+            "ci_hi": bs.ci_hi,
+            "n_pairs": float(bs.n),
             # Probabilidad bootstrap de que D > C en esa métrica (unilateral).
-            "p_better": p_better,
-            # P-value bilateral (sin corregir). Las correcciones por
-            # múltiples comparaciones se calculan más abajo sobre todo el dict.
-            "p_two_sided": p_two_sided,
+            "p_better": bs.p_positive,
+            # P-value bilateral (sin corregir); NaN si degenerado. Las
+            # correcciones múltiples se calculan más abajo y omiten los NaN.
+            "p_two_sided": bs.p_two,
+            "degenerate": float(bs.degenerate),
         }
     # Aplicar correcciones por múltiples comparaciones (Bonferroni, Holm, FDR)
     _apply_multiple_testing_correction(out)

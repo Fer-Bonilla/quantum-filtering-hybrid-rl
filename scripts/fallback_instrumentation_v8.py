@@ -32,7 +32,6 @@ import csv
 import sys
 
 import numpy as np
-
 import src.agents.hybrid_agent as ha
 from src.agents.hybrid_agent import (
     HybridAgent,
@@ -54,6 +53,7 @@ from src.quantum.quantum_walker import QuantumWalker
 from src.quantum.random_walker import RandomWalker
 from src.training.evaluate import PromisingSpec, compute_promising_matrix
 from src.utils.config import load_config
+from src.utils.paired_stats import paired_bootstrap
 from src.utils.paths import CONFIGS_DIR, TABLES_DIR
 
 sys.stdout.reconfigure(encoding="utf-8")
@@ -269,18 +269,14 @@ def main() -> None:
         dd = {r["seed"]: r[metric_key] for r in summary if r["arm"] == "D"}
         cc = {r["seed"]: r[metric_key] for r in summary if r["arm"] == "C"}
         d = np.array([dd[s] - cc[s] for s in SEEDS], dtype=float)
-        boots = np.array([rng_b.choice(d, size=len(d), replace=True).mean()
-                          for _ in range(B_BOOT)])
-        p2 = float(2 * min((boots <= 0).mean(), (boots >= 0).mean()))
+        bs = paired_bootstrap(d, n_boot=B_BOOT, rng=rng_b)
         rows_paired.append({
-            "contraste": "D-C", "muestra": label, "n": len(d),
-            "mean_diff": float(d.mean()),
-            "ci_lo": float(np.percentile(boots, 2.5)),
-            "ci_hi": float(np.percentile(boots, 97.5)),
-            "p_two_sided": p2, "B": B_BOOT, "rng_seed": RNG_BOOT})
-        print(f"D-C {label}: {d.mean():+.4f} "
-              f"IC95[{np.percentile(boots, 2.5):+.4f},"
-              f"{np.percentile(boots, 97.5):+.4f}] p2={p2:.4f}")
+            "contraste": "D-C", "muestra": label, "n": bs.n,
+            "mean_diff": bs.mean, "ci_lo": bs.ci_lo, "ci_hi": bs.ci_hi,
+            "p_two_sided": bs.p_two, "degenerate": int(bs.degenerate),
+            "B": B_BOOT, "rng_seed": RNG_BOOT})
+        print(f"D-C {label}: {bs.mean:+.4f} IC95[{bs.ci_lo:+.4f},{bs.ci_hi:+.4f}] "
+              f"p2={bs.p_two:.4f}")
     with PAIRED.open("w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(rows_paired[0].keys()))
         w.writeheader()

@@ -16,6 +16,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import numpy as np
+from src.utils.paired_stats import paired_bootstrap
 
 CSV_PATH = Path("outputs/tables/campaign_1_v3.csv")
 OUT_PATH = Path("outputs/tables/campaign_1_v3_paired_b_vs_a.csv")
@@ -82,16 +83,14 @@ def main() -> int:
             print(f"{m:<26}{'(insufficient data)':>50}")
             continue
 
-        boot = np.array(
-            [rng.choice(diffs, diffs.size, replace=True).mean() for _ in range(5000)]
-        )
-        ci_lo = float(np.percentile(boot, 2.5))
-        ci_hi = float(np.percentile(boot, 97.5))
-        p_better = float((boot > 0.0).mean())
-        p_two = 2.0 * min(p_better, 1.0 - p_better)
-        p_bonf_k11 = min(p_two * 11, 1.0)
+        bs = paired_bootstrap(diffs, n_boot=5000, rng=rng)
+        ci_lo, ci_hi = bs.ci_lo, bs.ci_hi
+        p_better = bs.p_positive
+        p_two = bs.p_two          # nan si degenerado (identico por construccion)
+        p_bonf_k11 = min(p_two * 11, 1.0) if np.isfinite(p_two) else float("nan")
         is_h = m in METRICS_FIVE
-        p_bonf_k5 = min(p_two * 5, 1.0) if is_h else float("nan")
+        p_bonf_k5 = (min(p_two * 5, 1.0) if (is_h and np.isfinite(p_two))
+                     else float("nan"))
         out_rows.append(
             {
                 "metric": m,
