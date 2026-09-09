@@ -576,7 +576,100 @@ def fig_caminata_cuantica() -> None:
     _save(fig, "fig_caminata_cuantica.pdf")
 
 
+# ---------------------------------------------------------------------------
+# 12. Mercado como grafo dinamico (conceptual; sustituye a grafo_mercado_explicacion.jpg)
+# ---------------------------------------------------------------------------
+
+def fig_grafo_mercado() -> None:
+    """Siete bloques: mercado, afinidad (con alpha+beta=1 e I_sec), sparsificacion,
+    grafo dinamico, puntaje de semilla, subgrafo local y conjunto candidato."""
+    fig, ax = plt.subplots(figsize=(11.0, 6.4))
+    ax.set_xlim(0, 22)
+    ax.set_ylim(0, 13)
+    ax.axis("off")
+    az, gr, na, ve = "#e8eef7", "#f4f4f4", "#fff3e0", "#e9f5e9"
+    fs = 7.8
+
+    # 1. mercado
+    _caja(ax, 0.3, 4.2, 3.4, 8.3,
+          "1. Mercado en el instante $t$\n\n$v_1, v_2, \\dots, v_N$\n\n"
+          "cada activo tiene atributos\nclásicos: retornos, volatilidad,\n"
+          "sector, volumen, ...\n\n$x_i^{\\mathrm{node}}\\in R^d$\n\n"
+          "codificación clásica\ndel mercado: $(X_t^{\\mathrm{node}}, W_t)$", az, fs)
+    # 2. afinidad
+    _caja(ax, 4.3, 10.0, 8.4, 2.5,
+          "2. Construcción de afinidad\n"
+          "$A_t(i,j) = \\alpha\\,\\max\\{0,\\rho_t(i,j)\\} + \\beta\\, I_{\\mathrm{sec}}(i,j)$\n"
+          "$\\rho_t$: correlación móvil positiva · $I_{\\mathrm{sec}}$: indicador sectorial · "
+          "$\\alpha,\\beta\\geq 0$, $\\alpha+\\beta=1$", gr, fs)
+    # 3. sparsificacion
+    _caja(ax, 4.3, 8.0, 8.4, 1.5,
+          "3. Esparsificación: $k_{\\mathrm{NN}}$ vecinos más cercanos + simetrización (OR)\n"
+          "pesos normalizados en [0, 1]", gr, fs)
+    # 4. grafo dinamico (dibujo)
+    _caja(ax, 4.3, 0.4, 8.4, 7.3, "", az, fs)
+    ax.text(8.5, 7.25, "4. Grafo dinámico de activos $G_t=(V, E_t, W_t)$", ha="center",
+            va="center", fontsize=8.6, fontweight="bold")
+    nodes = {"v1": (6.4, 6.2), "v4": (9.6, 6.0), "v2": (5.2, 4.6), "v11": (7.4, 5.0),
+             "v5": (8.2, 3.6), "v6": (10.6, 3.9), "v3": (5.3, 2.8), "v12": (6.8, 2.2),
+             "v8": (10.3, 2.0), "v9": (8.9, 1.5), "v7": (5.6, 1.2), "v10": (7.4, 0.9)}
+    edges = [("v1", "v4", 2.2), ("v1", "v2", 0.8), ("v1", "v11", 0.8), ("v2", "v11", 0.8),
+             ("v2", "v5", 2.0), ("v2", "v3", 0.8), ("v11", "v5", 1.0), ("v4", "v5", 1.2),
+             ("v5", "v6", 2.0), ("v5", "v8", 2.4), ("v5", "v12", 1.2), ("v3", "v12", 0.8),
+             ("v12", "v7", 0.8), ("v7", "v10", 1.6), ("v10", "v9", 0.8), ("v9", "v8", 0.8),
+             ("v4", "v6", 0.8), ("v6", "v8", 0.8), ("v12", "v10", 0.8)]
+    for a, b, w in edges:
+        (x0, y0), (x1, y1) = nodes[a], nodes[b]
+        ax.plot([x0, x1], [y0, y1], color="#8a9bb0", lw=w, zorder=1)
+    for n, (x, y) in nodes.items():
+        seed = n == "v5"
+        ax.add_patch(plt.Circle((x, y), 0.38, fc="#f6d78b" if seed else "#dbe6f3",
+                                ec="#c9a227" if seed else "#5b7fa6", lw=1.4 if seed else 0.9, zorder=2))
+        ax.text(x, y, f"$v_{{{n[1:]}}}$", ha="center", va="center", fontsize=7.5, zorder=3)
+    ax.text(11.6, 5.8, "simple · no dirigido\nponderado · dinámico\nesparso · pesos en [0,1]",
+            fontsize=7.2, ha="center", va="center")
+    # 5. puntaje de semilla
+    _caja(ax, 13.3, 8.6, 4.0, 3.2,
+          "5. Puntaje clásico\ndel nodo semilla\n"
+          "$b_t(i) = \\dfrac{\\bar r^{(L_s)}_{i,t}}{\\hat\\sigma^{(L_s)}_{i,t}+\\varepsilon}$\n"
+          "semilla = arg máx $b_t$\n(retorno medio reciente\nsobre volatilidad)", na, fs)
+    # 6. subgrafo local
+    _caja(ax, 17.9, 6.2, 3.9, 6.3, "", ve, fs)
+    ax.text(19.85, 12.0, "6. Subgrafo local $H_t\\subset G_t$", ha="center", va="center",
+            fontsize=8.4, fontweight="bold")
+    sub = {"v5": (19.85, 9.4), "v1": (19.85, 11.1), "v2": (18.6, 10.3), "v4": (21.1, 10.3),
+           "v6": (21.1, 8.6), "v12": (18.6, 8.4), "v8": (19.85, 7.5)}
+    for n, (x, y) in sub.items():
+        if n != "v5":
+            ax.plot([sub["v5"][0], x], [sub["v5"][1], y], color="#8a9bb0", lw=1.2, zorder=1)
+    for n, (x, y) in sub.items():
+        seed = n == "v5"
+        ax.add_patch(plt.Circle((x, y), 0.36, fc="#f6d78b" if seed else "#dbe6f3",
+                                ec="#c9a227" if seed else "#5b7fa6", lw=1.4 if seed else 0.9, zorder=2))
+        ax.text(x, y, f"$v_{{{n[1:]}}}$", ha="center", va="center", fontsize=7.2, zorder=3)
+    ax.text(19.85, 6.7, "BFS desde la semilla,\n$M_t=|V(H_t)|\\leq M$", ha="center",
+            va="center", fontsize=7.2)
+    # 7. conjunto candidato
+    _caja(ax, 17.9, 2.6, 3.9, 3.0,
+          "7. Conjunto candidato $q_t$\n$|q_t| = m_t = \\min(m, M_t)$\n"
+          "el módulo local opera sobre $H_t$\ny produce la máscara para\nla política clásica", ve, fs)
+    # flechas
+    for (x0, y0), (x1, y1), c in [((3.7, 8.75), (4.3, 8.75), "#444444"),
+                                  ((8.5, 10.0), (8.5, 9.5), "#444444"),
+                                  ((8.5, 8.0), (8.5, 7.7), "#444444"),
+                                  ((12.7, 4.5), (17.9, 8.0), "#444444"),
+                                  ((13.3, 9.4), (12.7, 7.6), "#c9a227"),
+                                  ((19.85, 6.2), (19.85, 5.6), "#2f8f4e")]:
+        ax.add_patch(FancyArrowPatch((x0, y0), (x1, y1), arrowstyle="-|>",
+                                     mutation_scale=12, color=c, lw=1.0))
+    ax.text(13.35, 8.2, "semilla", fontsize=7.2, color="#c9a227", ha="left", va="center")
+    ax.set_title("Del mercado al conjunto candidato: afinidad, grafo dinámico, subgrafo local y máscara",
+                 fontsize=10)
+    _save(fig, "fig_grafo_mercado.pdf")
+
+
 if __name__ == "__main__":
+    fig_grafo_mercado()
     fig_campaign_panels()
     fig_forest()
     fig_dosis()
@@ -588,4 +681,4 @@ if __name__ == "__main__":
     fig_walkforward()
     fig_arquitectura_esquematica()
     fig_caminata_cuantica()
-    print("\n[OK] 11 figuras PDF generadas.")
+    print("\n[OK] 12 figuras PDF generadas.")
