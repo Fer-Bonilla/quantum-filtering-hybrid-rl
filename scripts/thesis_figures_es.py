@@ -334,7 +334,7 @@ def fig_decision() -> None:
         ("3. Latencia por paso",
          "R evita la simulación DTQW → menor latencia (0,75 vs 1,29 ms)"),
         ("4. Coste en hardware real",
-         "DTQW: ≈42k–1.664k USD por campaña de 500.000 evaluaciones (Anexo D)\n"
+         "DTQW: ≈42 000 – 1 664 000 USD por campaña de 10 semillas (Anexo D)\n"
          "R: cómputo clásico ordinario"),
     ]
     y = 8.6
